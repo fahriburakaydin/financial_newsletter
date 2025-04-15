@@ -1,0 +1,70 @@
+# Finance Newsletter Configuration
+
+# Date settings (use "auto" for yesterday's date)
+date: "auto"
+
+# Region focus
+region: "US"  # Options: US, EU, ASIA, GLOBAL
+
+# Macro-economic focus areas
+macro_focus:
+  - "US"
+  - "EU"
+  - "China"
+  - "Sweden"
+
+# Stock tickers to track
+tickers:
+  - "MSFT"  # Microsoft
+  - "NVDA"  # NVIDIA
+  - "TSLA"  # Tesla
+  # - "AMZN"  # Amazon
+  # - "GOOGL"
+  # - "AZN"
+  # - "META"
+  # - "SINCH"
+  # - "KAMBI"
+  # - "XBRANE"
+  # - "SOFI"
+  # - "CRM"
+  # - "BURE"
+  # - "CESSA"
+  # - "XPEV"
+  # - "BMAX"
+  # - "VWS"
+  # - "NIO"
+  # - "GIGA"
+  # - "WAWI"
+  # - "XOS"
+
+# Market indices to track
+indices:
+  - "^GSPC"  # S&P 500
+  - "^DJI"   # Dow Jones
+  - "^IXIC"  # NASDAQ
+  - "^OMXS30"  # OMX Stockholm 30
+
+# Commodities to track
+commodities:
+  - "GC=F"   # Gold
+  - "CL=F"   # Crude Oil
+  - "SI=F"   # Silver
+
+# Cryptocurrencies to track
+crypto:
+  - "BTC-USD"  # Bitcoin
+  - "ETH-USD"  # Ethereum
+  - "SOL-USD"  # Solana
+
+# Output settings
+output_format:
+  - "json"     # Always output JSON
+  - "markdown" # Also output markdown
+  - "html"     # Optional HTML output
+
+# LLM settings
+llm:
+  provider: "sonar"  # Options: sonar, openai
+  fallback: "openai" # Fallback provider if primary fails
+  model: "sonar-reasoning-pro"  # For Sonar
+  openai_model: "gpt-4.5-preview"  # For OpenAI fallback
