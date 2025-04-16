@@ -1,5 +1,9 @@
 name: Sync Subscribers from MailerLite
 
+# grant the workflow write access to repo contents to allow commits
+permissions:
+  contents: write
+
 # Triggers: daily at 2 AM UTC, or manual trigger
 on:
   schedule:
