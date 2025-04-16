@@ -103,7 +103,7 @@ if __name__ == '__main__':
 
 
     # Full newsletter URL (the GitHub Pages site where reports are hosted)
-    full_newsletter_url = os.getenv('FULL_NEWSLETTER_URL', f'https://fahriburakaydin.github.io/financial_newsletter/reports/report_{date_str}.html')
+    full_newsletter_url = os.getenv('FULL_NEWSLETTER_URL', f'https://fahriburakaydin.github.io/financial_newsletter/outputs/report_{date_str}.html')
     
     #plain_text = f"{tldr}\n\nRead the full newsletter here: {full_newsletter_url}"
     #html_content = f"<p>{tldr}</p><p>Read the full newsletter <a href='{full_newsletter_url}'>here</a>.</p>"
