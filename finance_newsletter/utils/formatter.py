@@ -11,6 +11,10 @@ import json
 import logging
 from typing import Dict, Any, Optional
 from datetime import datetime
+import markdown
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Configure logging
 logging.basicConfig(
@@ -194,8 +198,10 @@ class NewsletterFormatter:
         md_content = self._generate_markdown(data, date_str)
         # Convert Markdown to HTML using the markdown library with the "extra" extension.
         # This should remove raw markdown symbols (##, **, etc.).
-        import markdown
         md_html = markdown.markdown(md_content, extensions=['extra'])
+        ## Get the full URL for the logo
+        logo_url = os.getenv('LOGO_URL', f'https://fahriburakaydin.github.io/financial_newsletter/logo.png')
+
         # Build the full HTML report using the designed template
         html_content = f"""\
 <!DOCTYPE html>
@@ -286,7 +292,7 @@ class NewsletterFormatter:
   <div class="container">
     <!-- Header -->
     <div class="header">
-      <img src="https://yourusername.github.io/yourrepository/logo.png" alt="Logo">
+      <img src={logo_url}" alt="Logo">
     </div>
     <!-- Content Section -->
     <div class="section">
@@ -313,7 +319,7 @@ if __name__ == "__main__":
         logger.error("No JSON report found in outputs folder.")
         exit(1)
     
-    latest_json = json_files[0]
+    latest_json = json_files[1]
     try:
         with open(latest_json, "r", encoding="utf-8") as f:
             newsletter_data = json.load(f)
