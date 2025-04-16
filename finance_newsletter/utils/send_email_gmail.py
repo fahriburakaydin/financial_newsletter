@@ -122,7 +122,7 @@ if __name__ == '__main__':
     /* Global styling for a modern look */
     body {{ margin:0; padding:0; background-color:#f9f9f9; font-family:Arial, sans-serif; }}
     .container {{ width:850px; max-width:100%; background-color:#ffffff; border-radius:8px; overflow:hidden; }}
-    .header {{ background: linear-gradient(90deg, #fcf6eb); padding:20px; text-align:center; }}
+    .header {{ background: linear-gradient(90deg, #fefaec); padding:20px; text-align:center; }}
     .content {{ padding:20px; color:#333333; font-size:16px; line-height:1.8; }}
     .cta {{ text-align:center; padding:20px; }}
     .cta a {{ display:inline-block; text-decoration:none; background-color:#28a745; color:#ffffff; padding:14px 28px; border-radius:5px; font-size:18px; font-weight:bold; }}
@@ -132,7 +132,7 @@ if __name__ == '__main__':
     /* Responsive adjustments for mobile devices */
     @media only screen and (max-width: 950px) {{
       .container {{ width: 100% !important; padding: 5px !important; }}
-      .header {{ padding:0x !important; background-color:#fcf6eb !important; }}
+      .header {{ padding:0x !important; background-color:#fefaec !important; }}
       .hero-image {{ width:150px; background-color:#fcf6eb !important; }}
       .content {{ padding:5px !important; }}
       .cta a {{ padding:5px 5px !important; font-size:16px !important; }}
