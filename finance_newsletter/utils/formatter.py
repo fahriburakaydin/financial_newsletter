@@ -9,7 +9,6 @@ import os
 import glob
 import json
 import logging
-import re
 from typing import Dict, Any, Optional
 from datetime import datetime
 
@@ -37,7 +36,7 @@ class NewsletterFormatter:
         try:
             date_str = date_str or datetime.now().strftime("%Y-%m-%d")
             filepath = os.path.join(self.output_dir, f"report_{date_str}.json")
-            with open(filepath, 'w') as f:
+            with open(filepath, 'w', encoding='utf-8') as f:
                 json.dump(data, f, indent=2)
             logger.info(f"JSON report saved to {filepath}")
             return filepath
@@ -72,13 +71,14 @@ class NewsletterFormatter:
             return ""
     
     def _generate_markdown(self, data: Dict[str, Any], date_str: str) -> str:
+        # Build a Markdown representation of the newsletter.
         md = []
         
         # Title
         md.append(f"# Financial Market Newsletter - {date_str}\n")
         
-        # TL;DR Summary Section
-        if "tldr_summary" in data:
+        # TL;DR Summary Section - removed as it is in the mail
+        """ if "tldr_summary" in data:
             tldr_data = data["tldr_summary"]
             if isinstance(tldr_data, dict):
                 tldr_text = tldr_data.get("summary", "No summary available")
@@ -86,10 +86,10 @@ class NewsletterFormatter:
                 tldr_text = str(tldr_data)
             md.append("## TL;DR Summary\n")
             md.append(tldr_text + "\n\n")
-        
+         """
         # Market News Section
         if "market_news" in data:
-            md.append("## Top Market-Moving News\n")
+            md.append("## Top Market-Moving News 🗞️\n")
             news_data = safe_dict(data["market_news"])
             if "error" in news_data:
                 md.append(f"*Error retrieving market news: {news_data['error']}*\n")
@@ -102,7 +102,7 @@ class NewsletterFormatter:
         
         # Market Reaction Section
         if "market_reaction" in data:
-            md.append("## Market Reaction Summary\n")
+            md.append("## Market Reaction Summary 🔍\n")
             reaction_data = safe_dict(safe_dict(data["market_reaction"]).get("data", {}))
             if "error" in safe_dict(data["market_reaction"]):
                 md.append(f"*Error retrieving market reaction: {data['market_reaction']['error']}*\n")
@@ -118,7 +118,7 @@ class NewsletterFormatter:
         
         # Macro-Economic Landscape Section
         if "macro_landscape" in data:
-            md.append("## Macro-Economic Landscape\n")
+            md.append("## Macro-Economic Landscape 🏦\n")
             macro_data = safe_dict(safe_dict(data["macro_landscape"]).get("data", {}))
             if "error" in safe_dict(data["macro_landscape"]):
                 md.append(f"*Error retrieving macro landscape: {data['macro_landscape']['error']}*\n")
@@ -153,35 +153,20 @@ class NewsletterFormatter:
         
         # Stock Watch Section
         if "stock_watch" in data:
-            md.append("## Stock Watch\n")
-            stock_data = safe_dict(safe_dict(data["stock_watch"]).get("data", {}))
-            if "error" in safe_dict(data["stock_watch"]):
-                md.append(f"*Error retrieving stock data: {data['stock_watch']['error']}*\n")
-            else:
-                sp = safe_dict(stock_data.get("sector_performance", {}))
-                md.append("### Sector Performance\n")
-                md.append(f"- **Best Performing:** {sp.get('best_performing', 'No data')}\n")
-                md.append(f"- **Worst Performing:** {sp.get('worst_performing', 'No data')}\n\n")
-                for stock in stock_data.get("stocks", []):
+            md.append("## Stock Watch 📈\n")
+            # New JSON format: stock_watch.data.stocks is a list of stock objects
+            stock_data = safe_dict(data["stock_watch"].get("data", {}))
+            stocks = stock_data.get("stocks", [])
+            if stocks:
+                for stock in stocks:
                     md.append(f"### {stock.get('company', 'Unknown')} ({stock.get('ticker', '')})\n")
-                    md.append(f"**Price:** {stock.get('price', 'N/A')} ({stock.get('performance', 'N/A')})\n\n")
-                    if "news" in stock:
-                        md.append("#### Recent News\n")
-                        for news in stock["news"]:
-                            md.append(f"- {news}\n")
-                        md.append("\n")
-                    ta = safe_dict(stock.get("technical_analysis", {}))
-                    md.append("#### Technical Analysis\n")
-                    md.append(f"- **Trend:** {ta.get('trend', 'No data')}\n")
-                    md.append(f"- **Support:** {ta.get('support', 'No data')}\n")
-                    md.append(f"- **Resistance:** {ta.get('resistance', 'No data')}\n")
-                    md.append(f"- **Moving Averages:** {ta.get('moving_averages', 'No data')}\n\n")
-                    md.append("#### Fundamental Outlook\n")
-                    md.append(f"{stock.get('fundamental_outlook', 'No data')}\n\n")
+                    md.append(f"{stock.get('overall_summary', 'No summary available')}\n\n")
+            else:
+                md.append("*No stock watch data available*\n\n")
         
         # Upcoming Events Section
         if "upcoming_events" in data:
-            md.append("## Upcoming Economic Events\n")
+            md.append("## Upcoming Economic Events 📢 📅\n")
             events_data = safe_dict(safe_dict(data["upcoming_events"]).get("data", {}))
             if "error" in safe_dict(data["upcoming_events"]):
                 md.append(f"*Error retrieving upcoming events: {data['upcoming_events']['error']}*\n")
@@ -205,27 +190,117 @@ class NewsletterFormatter:
         return "\n".join(md)
     
     def _generate_html(self, data: Dict[str, Any], date_str: str) -> str:
-        md = self._generate_markdown(data, date_str).replace("\n", "<br>\n")
-        return f"""
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <title>Financial Market Newsletter - {date_str}</title>
-            <style>
-                body {{ font-family: Arial, sans-serif; max-width: 800px; margin: auto; padding: 20px; }}
-                h1, h2, h3 {{ color: #2c3e50; }}
-                .footer {{ font-size: 0.8em; color: #999; margin-top: 40px; border-top: 1px solid #ccc; padding-top: 10px; }}
-            </style>
-        </head>
-        <body>
-            {md}
-            <div class="footer">
-                <p>This newsletter was automatically generated on {date_str}</p>
-            </div>
-        </body>
-        </html>
-        """
+        # Generate Markdown content
+        md_content = self._generate_markdown(data, date_str)
+        # Convert Markdown to HTML using the markdown library with the "extra" extension.
+        # This should remove raw markdown symbols (##, **, etc.).
+        import markdown
+        md_html = markdown.markdown(md_content, extensions=['extra'])
+        # Build the full HTML report using the designed template
+        html_content = f"""\
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Minutes by Burki - Daily Financial Report ({date_str})</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Global styling */
+    body {{ 
+      margin: 0; 
+      padding: 0; 
+      font-family: Arial, sans-serif; 
+      background-color: #f9f9f9; 
+      color: #333;
+      line-height: 1.7;
+    }}
+    .container {{ 
+      width: 850px; 
+      max-width: 100%; 
+      background-color: #ffffff; 
+      border-radius: 8px; 
+      overflow: hidden; 
+      margin: 20px auto; 
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }}
+    .header {{ 
+      background-color: #fcf6eb; 
+      padding: 20px; 
+      text-align: center; 
+    }}
+    .header img {{ 
+      width: 350px; 
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }}
+    .section {{ 
+      padding: 20px; 
+      border-bottom: 1px solid #ddd; 
+    }}
+    .section:last-child {{ 
+      border-bottom: none; 
+    }}
+    .section h2 {{ 
+      font-size: 24px; 
+      color: #333; 
+      margin-top: 0; 
+      margin-bottom: 10px; 
+    }}
+    .section p {{ 
+      font-size: 16px; 
+      margin-bottom: 10px; 
+    }}
+    .footer {{ 
+      padding: 15px; 
+      background-color: #f0f0f0; 
+      border-top: 1px solid #ddd; 
+      text-align: center; 
+      font-size: 14px; 
+      color: #555; 
+    }}
+    .footer p {{ 
+      margin: 10px 0 0; 
+      font-size: 12px; 
+      color: #777; 
+    }}
+    /* Responsive adjustments */
+    @media only screen and (max-width: 950px) {{
+      .container {{ 
+        width: 100% !important; 
+        padding: 5px; 
+      }}
+      .header {{ 
+        padding: 10px; 
+      }}
+      .header img {{ 
+        width: 250px !important; 
+      }}
+      .section {{ 
+        padding: 10px; 
+      }}
+    }}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <img src="https://yourusername.github.io/yourrepository/logo.png" alt="Logo">
+    </div>
+    <!-- Content Section -->
+    <div class="section">
+      {md_html}
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+      <p>This newsletter was automatically generated on {date_str}</p>
+    </div>
+  </div>
+</body>
+</html>
+"""
+        return html_content
 
 
 if __name__ == "__main__":
@@ -240,7 +315,7 @@ if __name__ == "__main__":
     
     latest_json = json_files[0]
     try:
-        with open(latest_json, "r") as f:
+        with open(latest_json, "r", encoding="utf-8") as f:
             newsletter_data = json.load(f)
             logger.info(f"Loaded JSON report from {latest_json}")
     except Exception as e:

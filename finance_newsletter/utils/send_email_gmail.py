@@ -117,7 +117,7 @@ if __name__ == '__main__':
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Daily Financial Newsletter TLDR</title>
+  <title>📝Daily Financial Newsletter TLDR</title>
   <style>
     /* Global styling for a modern look */
     body {{ margin:0; padding:0; background-color:#f9f9f9; font-family:Arial, sans-serif; }}
