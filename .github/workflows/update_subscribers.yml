@@ -1,10 +1,10 @@
 name: Sync Subscribers from MailerLite
 
-# grant the workflow write access to repo contents to allow commits
+# Grant the workflow write access to repo contents
 permissions:
   contents: write
 
-# Triggers: daily at 2 AM UTC, or manual trigger
+# Trigger daily at 2 AM UTC or manually
 on:
   schedule:
     - cron: '0 2 * * *'
@@ -17,7 +17,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          # allow the workflow to push commits
+          # ensure full history for rebase
+          fetch-depth: 0
+          # allow pushing back to the repo
           persist-credentials: true
 
       - name: Set up Python
@@ -41,6 +43,8 @@ jobs:
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git add subscribers.csv
-          # only commit if there are changes
-          git diff --cached --quiet || git commit -m "chore: update subscribers.csv [skip ci]"
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update subscribers.csv [skip ci]"
+          fi
+          git pull --rebase origin main
           git push
