@@ -190,7 +190,7 @@ class NewsletterFormatter:
                         md.append("\n")
         
         md.append("---\n")
-        md.append(f"*This newsletter was automatically generated on {date_str}*\n")
+        #md.append(f"*This newsletter was automatically generated on {date_str}*\n")
         return "\n".join(md)
     
     def _generate_html(self, data: Dict[str, Any], date_str: str) -> str:
@@ -257,6 +257,21 @@ class NewsletterFormatter:
       font-size: 16px; 
       margin-bottom: 10px; 
     }}
+    /* Call-to-Action (CTA) Button */
+    .cta {{
+      text-align: center; 
+      padding: 20px; 
+    }}
+     .cta a {{
+      display: inline-block; 
+      text-decoration: none; 
+      background-color: #28a745; 
+      color: #ffffff; 
+      padding: 14px 28px; 
+      border-radius: 5px; 
+      font-size: 18px; 
+      font-weight: bold; 
+    }}
     .footer {{ 
       padding: 15px; 
       background-color: #f0f0f0; 
@@ -298,9 +313,18 @@ class NewsletterFormatter:
     <div class="section">
       {md_html}
     </div>
+    <!-- Call-to-Action Button -->
+    <div class="cta">
+      <a href="https://fahriburakaydin.github.io/financial_newsletter/index.html"> View Full Report Archive</a>
+    </div>
     <!-- Footer -->
     <div class="footer">
-      <p>This newsletter was automatically generated on {date_str}</p>
+      <p>This newsletter was generated on {date_str}</p>
+      <p><em>All data is provided "as is". NOT FINANCIAL ADVICE.</em></p>
+      <p>Follow us on: 
+        <a href="https://twitter.com/YourHandle" style="text-decoration:none; color:#1DA1F2;">Twitter</a> | 
+        <a href="https://linkedin.com/in/YourProfile" style="text-decoration:none; color:#0077B5;">LinkedIn</a>
+      </p>
     </div>
   </div>
 </body>
@@ -319,7 +343,7 @@ if __name__ == "__main__":
         logger.error("No JSON report found in outputs folder.")
         exit(1)
     
-    latest_json = json_files[1]
+    latest_json = json_files[0]
     try:
         with open(latest_json, "r", encoding="utf-8") as f:
             newsletter_data = json.load(f)

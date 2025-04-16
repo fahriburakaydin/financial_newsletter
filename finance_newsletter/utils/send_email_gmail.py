@@ -111,7 +111,7 @@ if __name__ == '__main__':
     #Convert the markdown TLDR to HTML
     tldr_html = markdown_to_html(tldr)
 
-    logo_url = os.getenv('LOGO_URL', f'{full_newsletter_url}/logo.png')
+    logo_url = os.getenv('LOGO_URL', f'https://fahriburakaydin.github.io/financial_newsletter/logo.png')
     html_email = f"""\
 <!DOCTYPE html>
 <html>
