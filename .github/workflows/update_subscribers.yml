@@ -39,10 +39,18 @@ jobs:
         run: |
             git config user.name "GitHub Actions"
             git config user.email "actions@github.com"
+        
+            # Fetch the LATEST changes FIRST
+            git fetch origin main
+        
+            # Rebase local changes on top of the latest remote changes
+            git rebase origin/main
+        
+            # Add/commit changes AFTER ensuring local is up-to-date
             git add subscribers.csv
             if ! git diff --cached --quiet; then
               git commit -m "chore: update subscribers.csv [skip ci]"
             fi
-            git fetch origin main
-            git rebase origin/main
-            git push
+        
+            # Push with --force-with-lease to handle edge cases
+            git push --force-with-lease
