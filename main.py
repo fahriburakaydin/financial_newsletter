@@ -143,7 +143,7 @@ def run_newsletter_generation(config: Dict[str, Any]) -> Dict[str, Any]:
         logger.info("Running TL;DR summary chain...")
         tldr_result = tldr_chain.run(newsletter)
 
-        # Finalize the newsletter
+        
         final_newsletter = {
             "date": date_str,
             "tldr_summary": tldr_result,

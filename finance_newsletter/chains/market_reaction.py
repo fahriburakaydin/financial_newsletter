@@ -150,22 +150,19 @@ class MarketReactionChain:
             else:
                 result_str = result
             
-            # Step 1: Skip everything before the first JSON block (which may come after </think>)
-            json_start = result_str.find('{')
-            if json_start == -1:
-                logger.error("No JSON object start found in LLM output")
-                return {
-                    "section": "market_reaction",
-                    "date": date_str,
-                    "error": "No JSON object found"
-                }
+                       
+            # Step 1: Remove <think>...</think> blocks
+            result_str = re.sub(r"<think>.*?</think>", "", result_str, flags=re.DOTALL).strip()
 
-            # Step 2: Try to load the JSON from the first `{` onward
-            cleaned_response = result_str[json_start:].strip()
+            # Step 2: Extract first JSON object using regex
+            match = re.search(r"(\{.*\})", result_str, re.DOTALL)
+            if match:
+                cleaned_response = match.group(1).strip()
+            else:
+                cleaned_response = result_str.strip()
 
             # Remove citation footnotes like [1][5][10] from inside strings
             cleaned_response = re.sub(r'\s*\[\d+(?:\]\[\d+)*\]', '', cleaned_response)
-
             logger.info(f"Cleaned response: {cleaned_response}")
 
             try:

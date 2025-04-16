@@ -42,5 +42,4 @@ Thumbs.db
 *.tmp
 *.temp
 
-report_*
 test_outputs

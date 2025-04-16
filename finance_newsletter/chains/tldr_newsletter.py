@@ -65,45 +65,56 @@ class TLDRChain:
         Returns:
             Dict containing tldr data
         """
-        try:
-            # Get date from config or use yesterday's date
-            inputs = {"newsletter": newsletter}
-            result = self.chain.invoke(inputs)
-            logger.info(f"LLM response: {result}")
-            
-            # Ensure we have a string to parse: if not a string, extract content or cast to string
-            if not isinstance(result, str):
-                if hasattr(result, "content"):
-                    result_str = result.content
-                else:
-                    result_str = str(result)
-            else:
-                result_str = result
-
-            json_match = re.search(r"```(?:json)?\s*(\[.*?\])\s*```", result_str, re.DOTALL)
-            if json_match:
-                cleaned_response = json_match.group(1)
-            else:
-                # Fallback: try to locate just the first top-level JSON array
-                array_match = re.search(r"(\[\s*{.*?}\s*\])", result_str, re.DOTALL)
-                cleaned_response = array_match.group(1) if array_match else result_str.strip()
-            
-            
-            # Strip <think> block if present
-            cleaned_response = re.sub(r"<think>.*?</think>", "", result_str, flags=re.DOTALL).strip()
-            logger.info(f"Cleaned response: {cleaned_response}")
-
-
-            return {
-                "section": "tldr_summary",
-                "error": cleaned_response
-            }
-        except Exception as e:
-            logger.error(f"Error in TLDR summary chain: {e}")
-            return {
-                "section": "tldr_summary",
-                "error": str(e)
-            }
+        max_attempts = 3
+        attempt = 0
+        last_error = None
         
+        inputs = {"newsletter": newsletter}
+        
+        while attempt < max_attempts:
+            try:
+                result = self.chain.invoke(inputs)
+                logger.info(f"LLM response (attempt {attempt+1}): {result}")
+
+                
+                # Ensure we have a string to work with
+                if not isinstance(result, str):
+                    result_str = result.content if hasattr(result, "content") else str(result)
+                else:
+                    result_str = result
+
+                json_match = re.search(r"```(?:json)?\s*(\[.*?\])\s*```", result_str, re.DOTALL)
+                if json_match:
+                    cleaned_response = json_match.group(1)
+                else:
+                    # Fallback: try to locate just the first top-level JSON array
+                    array_match = re.search(r"(\[\s*{.*?}\s*\])", result_str, re.DOTALL)
+                    cleaned_response = array_match.group(1) if array_match else result_str.strip()
+                
+                
+                # Strip <think> block if present
+                cleaned_response = re.sub(r"<think>.*?</think>", "", result_str, flags=re.DOTALL).strip()
+
+                # Check if the cleaned response appears to be an error (e.g., it contains "401 Authorization Required")
+                if "401 Authorization Required" in cleaned_response:
+                    raise ValueError("Authorization error encountered in TLDR response.")
+
+                logger.info(f"Cleaned response: {cleaned_response}")
+
+
+                return {
+                    "section": "tldr_summary",
+                    "summary": cleaned_response
+                }
+            except Exception as e:
+                logger.error(f"Error in TLDR summary chain: {e}")
+                return {
+                    "section": "tldr_summary",
+                    "error": str(e)
+                }
+        return {
+        "section": "tldr_summary",
+        "summary": f"Error generating TLDR summary after {max_attempts} attempts: {last_error}"
+    }
 
 
