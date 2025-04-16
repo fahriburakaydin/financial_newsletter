@@ -23,6 +23,7 @@ dependencies = [
     "dotenv"
     "langchain-perplexity"
     "langchain-openai"
+    "markdown"
 ]
 
 [project.optional-dependencies]

@@ -32,10 +32,10 @@ jobs:
         run: |
           python main.py
 
-          - name: Send Newsletter Email via Gmail
-          env:
+      - name: Send Newsletter Email via Gmail
+        env:
             GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
             SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
             FULL_NEWSLETTER_URL: "https://yourusername.github.io/yourrepository"
-          run: |
+        run: |
             python send_email_gmail.py

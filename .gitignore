@@ -27,7 +27,6 @@ ENV/
 logs/
 
 # Output files
-outputs/
 test_outputs/
 
 # OS specific files
