@@ -292,7 +292,7 @@ class NewsletterFormatter:
   <div class="container">
     <!-- Header -->
     <div class="header">
-      <img src={logo_url}" alt="Logo">
+      <img src="{logo_url}" alt="Logo">
     </div>
     <!-- Content Section -->
     <div class="section">
