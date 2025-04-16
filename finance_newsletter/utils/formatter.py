@@ -74,6 +74,123 @@ class NewsletterFormatter:
             logger.error(f"Error formatting HTML: {e}")
             return ""
     
+    def update_index(self, index_path: Optional[str] = None) -> str:
+        """
+        Updates (or creates) an index.html file with links to all HTML reports in the outputs folder.
+        The reports are sorted by modification time (newest first).
+        """
+        if index_path is None:
+            index_path = os.path.join(os.getcwd(), "index.html")
+        
+        # Find all report HTML files matching the pattern in the output_dir.
+        html_files = sorted(
+            glob.glob(os.path.join(self.output_dir, "report_*.html")),
+            key=lambda x: os.path.getmtime(x),
+            reverse=True
+        )
+        
+        list_items = []
+        for file in html_files:
+            base = os.path.basename(file)
+            # Assuming filename format: report_YYYY-MM-DD.html
+            if base.startswith("report_") and base.endswith(".html"):
+                date_part = base[len("report_"):-len(".html")]
+                # Construct the relative URL for GitHub Pages.
+                # Adjust the href if needed (here we assume outputs folder is visible in your GitHub Pages deployment)
+                list_items.append(f'<li><a href="outputs/{base}">Newsletter {date_part}</a></li>\n')
+        
+        index_html = f"""\
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletter Reports Archive</title>
+  <style>
+    body {{
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }}
+    .container {{
+      max-width: 850px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }}
+    header {{
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 20px;
+    }}
+    header img {{
+      width: 200px;
+      height: auto;
+      display: block;
+      margin: 0 auto 10px;
+    }}
+    header h1 {{
+      font-size: 32px;
+      color: #333;
+      margin: 0;
+    }}
+    ul {{
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }}
+    li {{
+      margin: 10px 0;
+      border-bottom: 1px solid #eee;
+      padding: 10px 0;
+    }}
+    li a {{
+      text-decoration: none;
+      color: #005ecc;
+      font-size: 18px;
+    }}
+    li a:hover {{
+      text-decoration: underline;
+    }}
+    @media only screen and (max-width: 600px) {{
+      .container {{
+        margin: 20px auto;
+        padding: 10px;
+      }}
+      header h1 {{
+        font-size: 24px;
+      }}
+      header img {{
+        width: 150px;
+      }}
+      li a {{
+        font-size: 16px;
+      }}
+    }}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="{os.getenv('LOGO_URL', 'https://yourusername.github.io/yourrepository/logo.png')}" alt="Logo">
+      <h1>Newsletter Reports Archive</h1>
+    </header>
+    <ul>
+      {''.join(list_items)}
+    </ul>
+  </div>
+</body>
+</html>
+"""
+        with open(index_path, "w", encoding="utf-8") as f:
+            f.write(index_html)
+        logger.info(f"Index report saved to {index_path}")
+        return index_path
+
     def _generate_markdown(self, data: Dict[str, Any], date_str: str) -> str:
         # Build a Markdown representation of the newsletter.
         md = []
@@ -81,16 +198,6 @@ class NewsletterFormatter:
         # Title
         md.append(f"# Financial Market Newsletter - {date_str}\n")
         
-        # TL;DR Summary Section - removed as it is in the mail
-        """ if "tldr_summary" in data:
-            tldr_data = data["tldr_summary"]
-            if isinstance(tldr_data, dict):
-                tldr_text = tldr_data.get("summary", "No summary available")
-            else:
-                tldr_text = str(tldr_data)
-            md.append("## TL;DR Summary\n")
-            md.append(tldr_text + "\n\n")
-         """
         # Market News Section
         if "market_news" in data:
             md.append("## Top Market-Moving News 🗞️\n")
@@ -158,7 +265,6 @@ class NewsletterFormatter:
         # Stock Watch Section
         if "stock_watch" in data:
             md.append("## Stock Watch 📈\n")
-            # New JSON format: stock_watch.data.stocks is a list of stock objects
             stock_data = safe_dict(data["stock_watch"].get("data", {}))
             stocks = stock_data.get("stocks", [])
             if stocks:
@@ -190,18 +296,16 @@ class NewsletterFormatter:
                         md.append("\n")
         
         md.append("---\n")
-        #md.append(f"*This newsletter was automatically generated on {date_str}*\n")
+        # md.append(f"*This newsletter was automatically generated on {date_str}*\n")
         return "\n".join(md)
     
     def _generate_html(self, data: Dict[str, Any], date_str: str) -> str:
         # Generate Markdown content
         md_content = self._generate_markdown(data, date_str)
         # Convert Markdown to HTML using the markdown library with the "extra" extension.
-        # This should remove raw markdown symbols (##, **, etc.).
         md_html = markdown.markdown(md_content, extensions=['extra'])
-        ## Get the full URL for the logo
-        logo_url = os.getenv('LOGO_URL', f'https://fahriburakaydin.github.io/financial_newsletter/logo.png')
-
+        # Get the full URL for the logo from the environment variable.
+        logo_url = os.getenv('LOGO_URL', 'https://fahriburakaydin.github.io/financial_newsletter/logo.png')
         # Build the full HTML report using the designed template
         html_content = f"""\
 <!DOCTYPE html>
@@ -257,12 +361,11 @@ class NewsletterFormatter:
       font-size: 16px; 
       margin-bottom: 10px; 
     }}
-    /* Call-to-Action (CTA) Button */
     .cta {{
       text-align: center; 
       padding: 20px; 
     }}
-     .cta a {{
+    .cta a {{
       display: inline-block; 
       text-decoration: none; 
       background-color: #28a745; 
@@ -313,9 +416,9 @@ class NewsletterFormatter:
     <div class="section">
       {md_html}
     </div>
-    <!-- Call-to-Action Button -->
+    <!-- Call-to-Action Button for full archive -->
     <div class="cta">
-      <a href="https://fahriburakaydin.github.io/financial_newsletter/index.html"> View Full Report Archive</a>
+      <a href="https://fahriburakaydin.github.io/financial_newsletter/index.html">View Full Report Archive</a>
     </div>
     <!-- Footer -->
     <div class="footer">
@@ -356,5 +459,8 @@ if __name__ == "__main__":
     date_str = newsletter_data.get("date", datetime.now().strftime("%Y-%m-%d"))
     md_path = formatter.format_markdown(newsletter_data, date_str)
     html_path = formatter.format_html(newsletter_data, date_str)
+    # Update index.html with links to all HTML reports in the outputs folder.
+    index_path = formatter.update_index()
     logger.info(f"Markdown report saved to {md_path}")
     logger.info(f"HTML report saved to {html_path}")
+    logger.info(f"Index page updated at {index_path}")
