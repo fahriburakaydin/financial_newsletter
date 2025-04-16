@@ -1,10 +1,8 @@
 name: Sync Subscribers from MailerLite
 
-# Grant the workflow write access to repo contents
 permissions:
   contents: write
 
-# Trigger daily at 2 AM UTC or manually
 on:
   schedule:
     - cron: '0 2 * * *'
@@ -17,11 +15,8 @@ jobs:
       - name: Checkout repository (main branch)
         uses: actions/checkout@v3
         with:
-          # ensure you have the full history so rebase works
           fetch-depth: 0
-          # make sure you're on main, not a detached HEAD
           ref: main
-          # allow pushing back to the repo
           persist-credentials: true
 
       - name: Set up Python
@@ -48,6 +43,6 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m "chore: update subscribers.csv [skip ci]"
           fi
-          # Make sure to rebase onto the latest remote main
-          git pull --rebase origin main
+          git fetch origin main
+          git merge origin/main --no-edit
           git push
