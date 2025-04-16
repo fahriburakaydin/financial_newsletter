@@ -14,11 +14,13 @@ jobs:
   sync-subscribers:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout repository (main branch)
         uses: actions/checkout@v3
         with:
-          # ensure full history for rebase
+          # ensure you have the full history so rebase works
           fetch-depth: 0
+          # make sure you're on main, not a detached HEAD
+          ref: main
           # allow pushing back to the repo
           persist-credentials: true
 
@@ -46,5 +48,6 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m "chore: update subscribers.csv [skip ci]"
           fi
+          # Make sure to rebase onto the latest remote main
           git pull --rebase origin main
           git push
