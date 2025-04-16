@@ -37,14 +37,12 @@ jobs:
 
       - name: Commit and push updated subscribers.csv
         run: |
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git add subscribers.csv
-          if ! git diff --cached --quiet; then
-            # There are changes to commit
-            git commit -m "chore: update subscribers.csv [skip ci]"
-          fi
-          # Always fetch the latest before pushing
-          git fetch origin main
-          git pull --rebase origin main
-          git push origin main
+            git config user.name "GitHub Actions"
+            git config user.email "actions@github.com"
+            git add subscribers.csv
+            if ! git diff --cached --quiet; then
+              git commit -m "chore: update subscribers.csv [skip ci]"
+            fi
+            git fetch origin main
+            git rebase origin/main
+            git push
