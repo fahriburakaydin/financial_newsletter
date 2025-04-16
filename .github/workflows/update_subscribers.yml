@@ -1,0 +1,42 @@
+name: Sync Subscribers from MailerLite
+
+# Triggers: daily at 2 AM UTC, or manual trigger
+on:
+  schedule:
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+jobs:
+  sync-subscribers:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          # allow the workflow to push commits
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install python-dotenv requests
+
+      - name: Fetch and update subscribers.csv
+        env:
+          MAILERLITE_API_KEY: ${{ secrets.MAILERLITE_API_KEY }}
+        run: |
+          python update_subscribers.py
+
+      - name: Commit and push updated subscribers.csv
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add subscribers.csv
+          # only commit if there are changes
+          git diff --cached --quiet || git commit -m "chore: update subscribers.csv [skip ci]"
+          git push
