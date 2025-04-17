@@ -162,7 +162,7 @@ def run_newsletter_generation(config: Dict[str, Any]) -> Dict[str, Any]:
         }
         
         logger.info("Newsletter generation completed successfully")
-        print(f"Final newsletter: {json.dumps(final_newsletter, indent=2)}")
+        print(f"Final newsletter: {json.dumps(final_newsletter, indent=1)}")
 
         return final_newsletter
         
