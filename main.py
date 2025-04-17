@@ -79,7 +79,7 @@ def process_date(config: Dict[str, Any]) -> str:
     """
     date_str = config.get("date", "auto")
     if date_str == "auto":
-        yesterday = datetime.now() - timedelta(days=1)
+        yesterday = datetime.now() - timedelta(days=2) #-2 days for testing purposes, for not to generate todays report immediately
         date_str = yesterday.strftime("%Y-%m-%d")
         logger.info(f"Using yesterday's date: {date_str}")
     return date_str
@@ -97,6 +97,12 @@ def run_newsletter_generation(config: Dict[str, Any]) -> Dict[str, Any]:
     try:
         # Process date
         date_str = process_date(config)
+
+        outputs_dir = os.path.join(os.getcwd(), "outputs")
+        existing_json = os.path.join(outputs_dir, f"report_{date_str}.json")
+        if os.path.exists(existing_json):
+            logger.info(f"Report for {date_str} already exists ({existing_json}); skipping generation.")
+            return {"date": date_str, "skipped": True}
         
         # Initialize LLM provider
         llm_provider = LLMProvider(config_path="config.yaml")
@@ -173,8 +179,13 @@ def main():
             logger.error("Failed to load configuration. Exiting.")
             return
         
+
         # Run newsletter generation
         newsletter = run_newsletter_generation(config)
+
+        if newsletter.get("skipped"):
+            logger.info("Skipping format/save since report already existed.")
+            return
         
         # Check for errors
         if "error" in newsletter:
