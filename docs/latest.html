@@ -5,24 +5,74 @@
   <title>Latest Financial Report</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body, html { margin:0; padding:0; height:100%; }
-    iframe { border:none; width:100%; height:100%; }
+    /* Reset & layout */
+    body, html { margin:0; padding:0; height:100%; font-family:Arial, sans-serif; }
+    .header { 
+      background-color:#fcf6eb; 
+      padding:10px 20px; 
+      display:flex; 
+      align-items:center; 
+      justify-content:space-between;
+      box-shadow:0 2px 4px rgba(0,0,0,0.1);
+    }
+    .header h1 {
+      font-size:18px; margin:0; color:#333;
+    }
+    .subscribe-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    .header .subscribe-btn {
+      background-color:#dc7979;
+      color:white;
+      text-decoration:none;
+      padding:8px 16px;
+      border-radius:4px;
+      font-weight:bold;
+    }
+    .header .subscribe-btn:hover {
+      background-color:#e34949;
+    }
+    .subscribe-caption {
+      margin-top:4px;
+      font-size:12px;
+      color:#666;
+    }
+    iframe { 
+      border:none; 
+      width:100%; 
+      height:calc(100% - 52px); /* subtract header height */
+      display:block;
+    }
   </style>
 </head>
 <body>
+
+  <!-- Top bar with title + subscribe button + caption -->
+  <div class="header">
+    <h1>📄 Yesterday’s Financial Report</h1>
+    <div class="subscribe-wrapper">
+      <a class="subscribe-btn" href="https://fahriburakaydin.github.io/financial_newsletter/subscribe.html" target="_blank">
+        🔔 Subscribe!
+      </a>
+      <div class="subscribe-caption">
+        Subscribe in seconds — it’s completely free!
+      </div>
+    </div>
+  </div>
+
+  <!-- Embedded latest report -->
   <iframe id="reportFrame" src=""></iframe>
 
   <script>
     // Compute yesterday's date in YYYY-MM-DD
     const d = new Date();
-    d.setDate(d.getDate() - 2);
-    const iso = d.toISOString().slice(0, 10);  // "2025-04-16"
-    
-    // Build the URL to the report
-    const reportUrl = `./outputs/report_${iso}.html`;
-    
-    // Point the iframe at it
-    document.getElementById('reportFrame').src = reportUrl;
+    d.setDate(d.getDate() - 1); // Subtract one day
+    const iso = d.toISOString().slice(0, 10);  
+
+    // Point iframe at the right file
+    document.getElementById('reportFrame').src = `./outputs/report_${iso}.html`;
   </script>
 </body>
 </html>
