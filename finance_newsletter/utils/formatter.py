@@ -80,7 +80,7 @@ class NewsletterFormatter:
         The reports are sorted by modification time (newest first).
         """
         if index_path is None:
-            index_path = os.path.join(os.getcwd(),"docs" "index.html")
+            index_path = os.path.join(os.getcwd(),"docs", "index.html")
         
         # Find all report HTML files matching the pattern in the output_dir.
         html_files = sorted(
