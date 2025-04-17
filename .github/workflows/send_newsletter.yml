@@ -2,20 +2,26 @@
 name: Send Newsletter
 
 on:
-  workflow_dispatch:           # Manually triggering enabled for testing
+  workflow_dispatch:           # allow manual runs
   workflow_run:
-    workflows: ["Generate Newsletter"] # Triggered by the completion of the Generate Newsletter workflow
+    workflows: ["Generate Newsletter"]
     types:
-      - completed
+      - completed             # auto‑trigger after Generate Newsletter succeeds
 
 permissions:
-  contents: read   # Only need to read the generated reports and subscribers.csv
+  contents: read
 
 jobs:
   send:
-    # Only run if the Generate Newsletter workflow succeeded
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
+
+    # RUN if
+    #  • manually dispatched  OR
+    #  • triggered by Generate Newsletter AND it succeeded
+    if: ${{ 
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success') 
+      }}
 
     steps:
       - name: Checkout repository
@@ -35,5 +41,4 @@ jobs:
         env:
           GMAIL_USER:         ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
-        run: |
-          python send_email_gmail.py
+        run: python send_email_gmail.py
