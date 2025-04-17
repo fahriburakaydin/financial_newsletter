@@ -32,7 +32,7 @@ def safe_dict(value) -> Dict:
 class NewsletterFormatter:
     """Formatter for converting newsletter data to various output formats."""
     
-    def __init__(self, output_dir: str = "../outputs"):
+    def __init__(self, output_dir: str = "..docs/outputs"):
         self.output_dir = output_dir
         os.makedirs(output_dir, exist_ok=True)
     
@@ -80,7 +80,7 @@ class NewsletterFormatter:
         The reports are sorted by modification time (newest first).
         """
         if index_path is None:
-            index_path = os.path.join(os.getcwd(), "index.html")
+            index_path = os.path.join(os.getcwd(),"docs" "index.html")
         
         # Find all report HTML files matching the pattern in the output_dir.
         html_files = sorted(
@@ -97,7 +97,7 @@ class NewsletterFormatter:
                 date_part = base[len("report_"):-len(".html")]
                 # Construct the relative URL for GitHub Pages.
                 # Adjust the href if needed (here we assume outputs folder is visible in your GitHub Pages deployment)
-                list_items.append(f'<li><a href="outputs/{base}">Newsletter {date_part}</a></li>\n')
+                list_items.append(f'<li><a href="docs/outputs/{base}">Newsletter {date_part}</a></li>\n')
         
         index_html = f"""\
 <!DOCTYPE html>
@@ -439,7 +439,7 @@ class NewsletterFormatter:
 if __name__ == "__main__":
     # This main block finds the latest JSON report in the outputs folder,
     # loads it, and then generates Markdown and HTML reports from it.
-    outputs_dir = os.path.join(os.getcwd(), "outputs")
+    outputs_dir = os.path.join(os.getcwd(),"docs", "outputs")
     json_files = sorted(glob.glob(os.path.join(outputs_dir, "*.json")),
                         key=os.path.getmtime, reverse=True)
     if not json_files:

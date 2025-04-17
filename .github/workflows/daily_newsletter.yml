@@ -38,7 +38,7 @@ jobs:
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git add outputs/ index.html
+          git add docs/outputs/ index.html
           # only commit if there are changes
           git diff --cached --quiet || git commit -m "chore: daily newsletter reports [skip ci]"
           git push origin main

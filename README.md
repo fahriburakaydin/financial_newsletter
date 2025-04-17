@@ -101,24 +101,57 @@ python main.py
 ```
 
 The generated newsletter will be saved in the `outputs` directory in the formats specified in your configuration.
+#TODO: REPO CHANGED
 
 ## Project Structure
 
 ```
-finance_newsletter/
+.
+├── .github
+│   └── workflows
+│       ├── daily_newsletter.yml
+│       ├── send_newsletter.yml
+│       └── update_subscribers.yml
+├── docs
+│   ├── outputs
+│   │   ├── report_2025-04-14.html
+│   │   ├── report_2025-04-14.json
+│   │   ├── report_2025-04-14.md
+│   │   ├── report_2025-04-15.html
+│   │   ├── report_2025-04-15.json
+│   │   └── report_2025-04-15.md
+│   ├── index.html
+│   ├── subscribe.html
+├── finance_newsletter
+│   ├── chains
+│   │   ├── macro_landscape.py
+│   │   ├── market_news.py
+│   │   ├── market_reaction.py
+│   │   ├── stock_watch.py
+│   │   ├── tldr_newsletter.py
+│   │   └── upcoming_events.py
+│   ├── utils
+│   │   ├── formatter.py
+│   │   ├── send_email_gmail.py
+│   │   └── sonar_wrapper.py
+│   ├── finance_newsletter.egg-info
+├── test_outputs
+├── .env
+├── .gitignore
 ├── config.yaml
+├── docsindex.html
+├── finance_newsletter.log
+├── logo.png
 ├── main.py
-├── chains/
-│   ├── market_news.py
-│   ├── market_reaction.py
-│   ├── macro_landscape.py
-│   ├── stock_watch.py
-│   └── upcoming_events.py
-├── utils/
-│   ├── sonar_wrapper.py
-│   └── formatter.py
-└── outputs/
-    └── report_<YYYY-MM-DD>.json
+├── playground.log
+├── playground.py
+├── pyproject.toml
+├── README.md
+├── requirements.txt
+├── subscribers.csv
+├── test_newsletter.py
+└── update_subscribers.py
+
 ```
 
 ## Extending the System

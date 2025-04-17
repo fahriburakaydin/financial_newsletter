@@ -30,7 +30,7 @@ def load_subscribers(csv_file_path='subscribers.csv'):
 
 def get_latest_newsletter_json():
     # Use glob to find all JSON files that match your report pattern in the outputs folder
-    json_files = glob.glob("outputs/report_*.json")
+    json_files = glob.glob("docs/outputs/report_*.json")
     if not json_files:
         return None
     # Get the latest file by modification time
@@ -103,7 +103,7 @@ if __name__ == '__main__':
 
 
     # Full newsletter URL (the GitHub Pages site where reports are hosted)
-    full_newsletter_url = os.getenv('FULL_NEWSLETTER_URL', f'https://fahriburakaydin.github.io/financial_newsletter/outputs/report_{date_str}.html')
+    full_newsletter_url = os.getenv('FULL_NEWSLETTER_URL', f'https://fahriburakaydin.github.io/financial_newsletter/docs/outputs/report_{date_str}.html')
     
     #plain_text = f"{tldr}\n\nRead the full newsletter here: {full_newsletter_url}"
     #html_content = f"<p>{tldr}</p><p>Read the full newsletter <a href='{full_newsletter_url}'>here</a>.</p>"

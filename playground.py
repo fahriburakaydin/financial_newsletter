@@ -156,11 +156,11 @@ def save_result(result, chain_name):
     """
     try:
         # Create outputs directory if it doesn't exist
-        os.makedirs("outputs", exist_ok=True)
+        os.makedirs(os.path.join("docs", "outputs"), exist_ok=True)
         
         # Generate filename with timestamp
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"outputs/{chain_name}_{timestamp}.json"
+        filename = f"docs/outputs/{chain_name}_{timestamp}.json"
         
         # Save result to file
         with open(filename, 'w') as file:

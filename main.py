@@ -98,7 +98,7 @@ def run_newsletter_generation(config: Dict[str, Any]) -> Dict[str, Any]:
         # Process date
         date_str = process_date(config)
 
-        outputs_dir = os.path.join(os.getcwd(), "outputs")
+        outputs_dir = os.path.join(os.getcwd(), "docs", "outputs")
         existing_json = os.path.join(outputs_dir, f"report_{date_str}.json")
         if os.path.exists(existing_json):
             logger.info(f"Report for {date_str} already exists ({existing_json}); skipping generation.")
@@ -193,7 +193,7 @@ def main():
             return
         
         # Initialize formatter
-        formatter = NewsletterFormatter(output_dir="outputs")
+        formatter = NewsletterFormatter(output_dir="docs/outputs")
         
         # Get date string
         date_str = newsletter.get("date", datetime.now().strftime("%Y-%m-%d"))
