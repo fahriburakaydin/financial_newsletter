@@ -97,7 +97,7 @@ class NewsletterFormatter:
                 date_part = base[len("report_"):-len(".html")]
                 # Construct the relative URL for GitHub Pages.
                 # Adjust the href if needed (here we assume outputs folder is visible in your GitHub Pages deployment)
-                list_items.append(f'<li><a href="outputs/{base}">Newsletter {date_part}</a></li>\n')
+                list_items.append(f'<li><a href="financial_newsletter/outputs/{base}">Newsletter {date_part}</a></li>\n')
         
         index_html = f"""\
 <!DOCTYPE html>
