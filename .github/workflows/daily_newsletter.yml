@@ -1,41 +1,44 @@
-name: Generate Daily Newsletter
+# .github/workflows/generate_newsletter.yml
+name: Generate Newsletter
 
-# This job is triggered every day at 8:00 UTC.
+permissions:
+  contents: write   # allow pushing generated reports and index.html
+
 on:
   schedule:
-    - cron: '0 8 * * *'
-  # This allows you to run the workflow manually if needed.
-  workflow_dispatch:
+    - cron: '0 8 * * *'    # every day at 07:00 UTC
+  workflow_dispatch:      # manual trigger via Actions UI
 
 jobs:
-  generate:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          persist-credentials: true
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: '3.11'
 
       - name: Install dependencies
         run: |
-          pip install --upgrade pip
+          python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run newsletter generation
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+      - name: Generate newsletter (and update index.html)
         run: |
           python main.py
 
-      - name: Send Newsletter Email via Gmail
-        env:
-            GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
-            SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
-            FULL_NEWSLETTER_URL: "https://yourusername.github.io/yourrepository"
+      - name: Commit & push reports and index
         run: |
-            python send_email_gmail.py
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add outputs/ index.html
+          # only commit if there are changes
+          git diff --cached --quiet || git commit -m "chore: daily newsletter reports [skip ci]"
+          git push origin main
