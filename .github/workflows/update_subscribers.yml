@@ -12,12 +12,17 @@ jobs:
   sync-subscribers:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository (main branch)
+      - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0
-          ref: main
+          fetch-depth: 0           # Full history so we can reset properly
           persist-credentials: true
+
+      - name: Ensure we're on the latest main
+        run: |
+          git fetch origin main
+          git checkout main
+          git reset --hard origin/main
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -35,22 +40,14 @@ jobs:
         run: |
           python update_subscribers.py
 
-      - name: Commit and push updated subscribers.csv
+      - name: Commit & push subscribers.csv
         run: |
-            git config user.name "GitHub Actions"
-            git config user.email "actions@github.com"
-        
-            # Fetch the LATEST changes FIRST
-            git fetch origin main
-        
-            # Rebase local changes on top of the latest remote changes
-            git rebase origin/main
-        
-            # Add/commit changes AFTER ensuring local is up-to-date
-            git add subscribers.csv
-            if ! git diff --cached --quiet; then
-              git commit -m "chore: update subscribers.csv [skip ci]"
-            fi
-        
-            # Push with --force-with-lease to handle edge cases
-            git push --force-with-lease
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add subscribers.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update subscribers.csv [skip ci]"
+            git push origin main
+          else
+            echo "No changes to subscribers.csv"
+          fi
