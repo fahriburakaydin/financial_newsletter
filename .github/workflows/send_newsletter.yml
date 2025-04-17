@@ -2,6 +2,7 @@
 name: Send Newsletter
 
 on:
+  workflow_dispatch:           # Manually triggering enabled for testing
   workflow_run:
     workflows: ["Generate Newsletter"] # Triggered by the completion of the Generate Newsletter workflow
     types:
