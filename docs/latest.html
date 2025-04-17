@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Latest Financial Report</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body, html { margin:0; padding:0; height:100%; }
+    iframe { border:none; width:100%; height:100%; }
+  </style>
+</head>
+<body>
+  <iframe id="reportFrame" src=""></iframe>
+
+  <script>
+    // Compute yesterday's date in YYYY-MM-DD
+    const d = new Date();
+    d.setDate(d.getDate() - 2);
+    const iso = d.toISOString().slice(0, 10);  // "2025-04-16"
+    
+    // Build the URL to the report
+    const reportUrl = `./outputs/report_${iso}.html`;
+    
+    // Point the iframe at it
+    document.getElementById('reportFrame').src = reportUrl;
+  </script>
+</body>
+</html>
