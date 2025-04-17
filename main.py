@@ -79,7 +79,7 @@ def process_date(config: Dict[str, Any]) -> str:
     """
     date_str = config.get("date", "auto")
     if date_str == "auto":
-        yesterday = datetime.now() - timedelta(days=2) #-2 days for testing purposes, for not to generate todays report immediately
+        yesterday = datetime.now() - timedelta(days=1) # Get yesterday's date
         date_str = yesterday.strftime("%Y-%m-%d")
         logger.info(f"Using yesterday's date: {date_str}")
     return date_str
