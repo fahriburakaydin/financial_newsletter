@@ -41,4 +41,4 @@ jobs:
         env:
           SENDER_EMAIL:         ${{ secrets.SENDER_EMAIL }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
-        run: python - m financial_newsletter.utils.send_email_gmail.py
+        run: python - m financial_newsletter.utils.send_email_gmail
