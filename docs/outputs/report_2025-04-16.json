@@ -1,0 +1,403 @@
+{
+  "date": "2025-04-16",
+  "tldr_summary": {
+    "section": "tldr_summary",
+    "summary": "**TLDR: April 16, 2025 Market Summary**  \nThe markets faced turbulence driven by healthcare shocks, tech trade risks, and stagflation fears. Key developments:  \n\n### \ud83d\udd25 Top Stories  \n- **UnitedHealth (UNH) -18%**: Slashed profit forecasts due to rising medical costs, dragging Dow futures down 500+ points. Healthcare peers Humana (-8%) and CVS (-6%) plunged[3].  \n- **Eli Lilly (LLY) +16%**: Phase 3 trial success for oral weight-loss drug orforglipron boosted optimism. Rival Novo Nordisk (NVO) fell 7%[1][3].  \n- **Nvidia (NVDA) -7%**: Took a $5.5B charge from China AI chip export curbs, contributing to Nasdaq\u2019s 2.5% weekly decline[3].  \n\n### \ud83d\udcc9 Market Moves  \n- **Indices**: S&P 500 (-2.24%), Dow (-3.13%), Nasdaq (-4.08%)  \n- **Sector Watch**: Real Estate (+7.83%) rallied; Tech (-4.81%) and Communications (-3.80%) sank[3].  \n- **Crypto Rebound**: Bitcoin (+2% to $84.5K), Solana (+6%) recovered partially from tariff-driven sell-offs[3].  \n\n### \ud83c\udf0d Macro Snapshot  \n- **US Growth**: 2025 GDP forecast cut to 1.3% (from 1.9%) due to tariffs.  \n- **Fed Policy**: One 25bps rate cut expected in December 2025[3].  \n- **Global Risks**: Trade tensions may add +2.3% to global prices while slowing growth to 2.2%\u2014weakest since 2008 (ex-COVID)[3].  \n\n### \ud83d\udea8 Stocks to Watch  \n- **Microsoft (MSFT)**: -1.7%; Morgan Stanley cut price target amid AI delays. Support at $344[3].  \n- **Tesla (TSLA)**: -4.9% YTD; boycotts over Musk\u2019s politics offset tariff exemptions[3].  \n\n### \ud83d\udcc5 Upcoming Events  \n- **April 17**: US jobless claims & Fed balance sheet update.  \n- **April 21**: World Bank Spring Meetings begin.  \n\n**Outlook**: Markets remain hypersensitive to trade policy shifts and central bank signals. Healthcare breakthroughs (Eli Lilly) and energy resilience offer rare bright spots amid tech-driven volatility."
+  },
+  "region": "US",
+  "market_news": {
+    "section": "market_news",
+    "date": "2025-04-16",
+    "region": "US",
+    "news_items": [
+      {
+        "headline": "UnitedHealth Slashes Profit Forecast, Shares Plunge 18%",
+        "summary": "UnitedHealth (UNH) cut its annual profit forecast due to rising medical costs, triggering a 18% stock plunge. The drop single-handedly dragged Dow futures down over 500 points.",
+        "impact": "Dow Jones Industrial Average fell 1.2%, while Humana (HUM) and CVS Health (CVS) dropped 8% and 6%, respectively, amplifying healthcare sector losses.",
+        "source": "Investopedia, Economic Times"
+      },
+      {
+        "headline": "Eli Lilly Soars 16% on Successful Weight-Loss Drug Trial",
+        "summary": "Eli Lilly (LLY) reported positive Phase 3 trial results for its oral weight-loss treatment, reigniting investor enthusiasm for obesity therapeutics.",
+        "impact": "LLY became the S&P 500's top gainer, boosting healthcare sector optimism amid broader market volatility.",
+        "source": "Investopedia, Economic Times"
+      },
+      {
+        "headline": "TSMC Beats Earnings Estimates Despite Tariff Worries",
+        "summary": "Taiwan Semiconductor Manufacturing Co. (TSM) posted a 60% Q1 net profit jump and maintained full-year guidance, defying concerns about U.S.-China trade tensions.",
+        "impact": "TSM shares rose 2%, providing stability to tech stocks like Apple (AAPL) and Alphabet (GOOG) in early trading.",
+        "source": "Investopedia, Economic Times"
+      },
+      {
+        "headline": "Nvidia Takes $5.5B Charge Over China Export Restrictions",
+        "summary": "Nvidia (NVDA) disclosed a $5.5B charge related to U.S. export curbs on AI chips to China, reflecting tightening geopolitical tech controls.",
+        "impact": "NVDA shares fell 7% on Wednesday, contributing to the Nasdaq's 2.5% weekly decline and broader semiconductor sector weakness.",
+        "source": "Economic Times"
+      },
+      {
+        "headline": "Fed Chair Powell Warns Tariffs May Stoke Inflation, Slow Growth",
+        "summary": "Jerome Powell stated new tariffs could create a 'challenging scenario' for rate policy, balancing inflation risks against economic slowdown concerns.",
+        "impact": "Comments exacerbated Wednesday's sell-off, with S&P 500 dropping 1% and tech stocks tumbling ahead of Thursday's mixed recovery attempt.",
+        "source": "Investopedia, Economic Times, TipRanks"
+      }
+    ]
+  },
+  "market_reaction": {
+    "section": "market_reaction",
+    "date": "2025-04-16",
+    "data": {
+      "indices": [
+        {
+          "name": "S&P 500",
+          "ticker": "^GSPC",
+          "performance": "-2.24%",
+          "value": "5,275.70",
+          "summary": "Closed at 5,275.70, down 120.93 points. Weekly decline of 3.36% and monthly decline of 6.48%. Real Estate (+7.83%) outperformed, while Information Technology (-4.81%) and Communications (-3.80%) dragged. Volatility (CBOE) rose to 32.64 (+2.52%)."
+        },
+        {
+          "name": "Dow Jones Industrial Average",
+          "ticker": "^DJI",
+          "performance": "-3.13% (sector avg)",
+          "value": "N/A (closed)",
+          "summary": "5 stocks advanced, 27 declined. Energy (+0.20%) was the sole gainer; Information Technology (-4.82%) and Materials (-3.76%) lagged. Nvidia (-6.80%) and Apple (-3.90%) were top losers."
+        },
+        {
+          "name": "Nasdaq Composite",
+          "ticker": "^IXIC",
+          "performance": "-4.08% (sector avg)",
+          "value": "N/A (closed)",
+          "summary": "3 stocks advanced, 88 declined. Energy (+1.74%) outperformed, while Communication Services (-22.39%) and IT (-4.86%) suffered. Diamondback Energy (+2.40%) was a rare gainer."
+        },
+        {
+          "name": "OMXS30",
+          "ticker": "^OMXS30",
+          "performance": "N/A",
+          "value": "N/A",
+          "summary": "No data available in provided sources; market likely closed."
+        }
+      ],
+      "commodities": [
+        {
+          "name": "Gold",
+          "ticker": "GC=F",
+          "performance": "N/A",
+          "value": "N/A",
+          "summary": "Specific price data unavailable in sources. MLCX Index weight: 5.79% as of Jan 2025. Sentiment neutral amid broader market volatility."
+        },
+        {
+          "name": "Crude Oil",
+          "ticker": "CL=F",
+          "performance": "N/A",
+          "value": "N/A",
+          "summary": "Brent Crude holds 26.64% weight in MLCX Index. No April 16-17 price data available; tariffs and energy sector gains (+7.83% in S&P 500) suggest mixed sentiment."
+        },
+        {
+          "name": "Silver",
+          "ticker": "SI=F",
+          "performance": "N/A",
+          "value": "N/A",
+          "summary": "MLCX weight: 0.54%. No recent price data; underperformance in precious metals sector likely persists."
+        }
+      ],
+      "crypto": [
+        {
+          "name": "Bitcoin",
+          "ticker": "BTC-USD",
+          "performance": "+2.0%",
+          "value": "$84,500",
+          "summary": "Rebounded to $84,500 after 2.1% drop on April 16. Tariff uncertainties and Fed rate cut delays drove volatility. Symmetrical triangle pattern suggests potential breakout above $92K or breakdown below $78K."
+        },
+        {
+          "name": "Ethereum",
+          "ticker": "ETH-USD",
+          "performance": "+3.0%",
+          "value": "$1,666.50",
+          "summary": "Rose 3% but faces resistance at $1,590. Bearish reversal pattern noted; trading volume spiked during sell-offs."
+        },
+        {
+          "name": "Solana",
+          "ticker": "SOL-USD",
+          "performance": "+6.0%",
+          "value": "$136.00",
+          "summary": "Outperformed with 6% gain. Recent 14.5% rally (April 11-14) corrected, but support at $126-$127 holds. Descending resistance trendline signals consolidation."
+        }
+      ],
+      "overall_summary": "Indices faced broad declines (-2.24% S&P 500, -3.13% Dow) driven by tech sector sell-offs and trade war anxieties. Crypto rebounded cautiously (BTC +2%, SOL +6%) amid tariff policy shifts and stagflation fears. Commodities lacked actionable data, but energy sector gains (+7.83% in S&P 500 Real Estate) hinted at risk-off sentiment. Markets remain hypersensitive to geopolitical and monetary policy developments."
+    }
+  },
+  "macro_landscape": {
+    "section": "macro_landscape",
+    "date": "2025-04-16",
+    "data": {
+      "regions": [
+        {
+          "name": "US",
+          "economic_conditions": {
+            "growth": "2025 GDP growth forecast revised down to 1.3% (from 1.9%), 2026 to 1.5%",
+            "inflation": "Core goods inflation rising due to tariffs; services inflation softening to below 4%",
+            "employment": "Labor market momentum slowing, unemployment expected to rise from 2024 levels"
+          },
+          "central_bank": {
+            "current_rate": "5.25-5.50%",
+            "recent_decision": "Forecasting one 25bps cut in December 2025",
+            "outlook": "Limited easing in 2025 due to tariff-driven inflation, series of cuts expected in 2026"
+          },
+          "recent_indicators": [
+            {
+              "indicator": "Q4 2024 GDP",
+              "value": "+2.4% annualized",
+              "impact": "Consumer spending (+4.2%) and government expenditures drove growth"
+            },
+            {
+              "indicator": "Consumer Sentiment",
+              "value": "64.7 (Feb 2025)",
+              "impact": "9.8% monthly decline due to tariff price fears"
+            }
+          ],
+          "risks_opportunities": [
+            "Risk: Tariffs projected to reduce 2025 GDP by 0.9pp and cause $3,800 annual household consumer losses",
+            "Opportunity: Strong consumer spending (+4.2% Q4 2024) despite headwinds"
+          ]
+        },
+        {
+          "name": "EU",
+          "economic_conditions": {
+            "growth": "2025 forecast cut to <1% due to US tariffs offsetting defense spending gains",
+            "inflation": "Core inflation projected at 1.8% year-over-year",
+            "employment": "Unemployment expected to rise to 6.5% from record low 6.2%"
+          },
+          "central_bank": {
+            "current_rate": "2.5%",
+            "recent_decision": "Implementing three 25bps cuts in 2025",
+            "outlook": "Dovish stance due to growth/inflation undershoot risks"
+          },
+          "recent_indicators": [
+            {
+              "indicator": "Manufacturing Prices",
+              "value": "Steep increases linked to US tariffs",
+              "impact": "Input costs rising across eurozone industries"
+            }
+          ],
+          "risks_opportunities": [
+            "Risk: Apparel prices projected to rise 17% from US tariffs",
+            "Opportunity: Fiscal stimulus from German infrastructure/defense programs"
+          ]
+        },
+        {
+          "name": "China",
+          "economic_conditions": {
+            "growth": "Sub-4% growth projected for 2025-2026 due to trade tensions",
+            "inflation": "Manufacturing input prices rising from global tariff impacts",
+            "employment": "Business expectations deteriorating across major sectors"
+          },
+          "central_bank": {
+            "current_rate": "Data not available in sources",
+            "recent_decision": "Data not available in sources",
+            "outlook": "Data not available in sources"
+          },
+          "recent_indicators": [
+            {
+              "indicator": "PMI Business Expectations",
+              "value": "Multi-quarter lows",
+              "impact": "Tariffs cited as primary concern"
+            }
+          ],
+          "risks_opportunities": [
+            "Risk: Escalating US trade tensions reducing export capacity",
+            "Opportunity: No positive factors identified in sources"
+          ]
+        },
+        {
+          "name": "Sweden",
+          "economic_conditions": {
+            "growth": "No recent data available in provided sources",
+            "inflation": "No recent data available in provided sources",
+            "employment": "No recent data available in provided sources"
+          },
+          "central_bank": {
+            "current_rate": "No recent data available in provided sources",
+            "recent_decision": "No recent data available in provided sources",
+            "outlook": "No recent data available in provided sources"
+          },
+          "recent_indicators": [],
+          "risks_opportunities": []
+        }
+      ],
+      "global_outlook": "Global growth forecast cut to 2.2% for 2025 - weakest since 2008 excluding COVID. Trade tensions drive synchronized slowdown with US (-0.9pp GDP impact), EU (<1% growth), and China (sub-4%). Central banks diverge: Fed delays easing while ECB implements cuts. Key risk: Negative feedback loop between tariffs (projected +2.3% global price level) and stagnant growth."
+    }
+  },
+  "stock_watch": {
+    "section": "stock_watch",
+    "date": "2025-04-16",
+    "data": {
+      "stocks": [
+        {
+          "ticker": "MSFT",
+          "company": "Microsoft Corporation",
+          "current_price": 379.04,
+          "daily_performance": -1.7,
+          "recent_news": "Morgan Stanley lowered Microsoft's price target from $530 to $472, citing macroeconomic headwinds. The stock also faced broader market pressure from Fed Chair Powell's tariff warnings[1][3][10].",
+          "technical_analysis": "Downtrend; trading below 50-day ($390.78) and 200-day ($413.81) moving averages. Recent range: $344.79\u2013$394.65[4][5].",
+          "fundamental_outlook": "Mixed sentiment. Consensus remains 'Moderate Buy' with average $499.97 price target, but Q1 earnings face risks from AI investment delays and cloud spending cuts[1][3]."
+        },
+        {
+          "ticker": "NVDA",
+          "company": "Nvidia Corporation",
+          "current_price": 104.49,
+          "daily_performance": -6.9,
+          "recent_news": "Anticipates $5.5B charge from U.S.-China export restrictions on H20 AI chips. DA Davidson lowered price target to $120 amid tariff concerns[6][8][10].",
+          "technical_analysis": "Descending wedge pattern. Key support at $96 (March 2024 low), resistance near $130. RSI neutral at 48[6][8].",
+          "fundamental_outlook": "Cautious. Long-term AI demand offsets near-term export risks. Oppenheimer maintains bullish outlook on data center growth[6][8]."
+        },
+        {
+          "ticker": "TSLA",
+          "company": "Tesla, Inc.",
+          "current_price": null,
+          "daily_performance": -4.94,
+          "recent_news": "Facing consumer boycotts over Elon Musk's political ties. YTD loss: 40.08% due to sales declines and DOGE office controversies[10].",
+          "technical_analysis": "Bearish trend; 52-week low at $146. Support levels at $137\u2013$146, resistance near $166[2][10].",
+          "fundamental_outlook": "Bearish sentiment. Tariff exemptions failed to offset demand concerns. Analyst warnings about Q2 delivery targets[10]."
+        }
+      ]
+    }
+  },
+  "upcoming_events": {
+    "section": "upcoming_events",
+    "date": "2025-04-17",
+    "data": {
+      "calendar": [
+        {
+          "date": "2025-04-17",
+          "day": "Thursday",
+          "events": [
+            {
+              "time": "12:30 PM ET",
+              "region": "US",
+              "event": "Initial Jobless Claims",
+              "previous": "224K",
+              "forecast": "227.0K",
+              "importance": "High"
+            },
+            {
+              "time": "12:30 PM ET",
+              "region": "US",
+              "event": "Philadelphia Fed Manufacturing Index",
+              "previous": "12.5",
+              "forecast": "10",
+              "importance": "Medium"
+            },
+            {
+              "time": "08:30 PM ET",
+              "region": "US",
+              "event": "Fed Balance Sheet Release",
+              "previous": "$6.73T",
+              "forecast": "",
+              "importance": "High"
+            }
+          ]
+        },
+        {
+          "date": "2025-04-18",
+          "day": "Friday",
+          "events": [
+            {
+              "time": "03:00 PM ET",
+              "region": "US",
+              "event": "Fed Daly Speech",
+              "previous": "",
+              "forecast": "",
+              "importance": "High"
+            },
+            {
+              "time": "08:30 PM ET",
+              "region": "US",
+              "event": "Fed Kashkari Speech",
+              "previous": "",
+              "forecast": "",
+              "importance": "Medium"
+            }
+          ]
+        },
+        {
+          "date": "2025-04-21",
+          "day": "Monday",
+          "events": [
+            {
+              "time": "04:00 AM ET",
+              "region": "ID",
+              "event": "Balance of Trade",
+              "previous": "$2.64B",
+              "forecast": "$2.5B",
+              "importance": "Medium"
+            },
+            {
+              "time": "02:00 PM ET",
+              "region": "US",
+              "event": "CB Leading Index MoM",
+              "previous": "-0.3%",
+              "forecast": "-0.5%",
+              "importance": "Medium"
+            },
+            {
+              "time": "All Day",
+              "region": "Global",
+              "event": "World Bank Spring Meetings Begin",
+              "previous": "",
+              "forecast": "",
+              "importance": "High"
+            }
+          ]
+        },
+        {
+          "date": "2025-04-22",
+          "day": "Tuesday",
+          "events": [
+            {
+              "time": "01:30 PM ET",
+              "region": "US",
+              "event": "Fed Harker Speech",
+              "previous": "",
+              "forecast": "",
+              "importance": "Medium"
+            }
+          ]
+        },
+        {
+          "date": "2025-04-24",
+          "day": "Thursday",
+          "events": [
+            {
+              "time": "01:30 AM ET",
+              "region": "AU",
+              "event": "RBA Bulletin Release",
+              "previous": "",
+              "forecast": "",
+              "importance": "Medium"
+            },
+            {
+              "time": "04:00 AM ET",
+              "region": "EU",
+              "event": "New Car Registrations YoY",
+              "previous": "-2.4%",
+              "forecast": "",
+              "importance": "Low"
+            },
+            {
+              "time": "06:00 AM ET",
+              "region": "SA",
+              "event": "Balance of Trade",
+              "previous": "SAR22.0B",
+              "forecast": "",
+              "importance": "Medium"
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        "US Fed officials Daly and Kashkari speaking on April 18",
+        "World Bank Spring Meetings starting April 21 (through April 26)",
+        "Key Indonesian trade data and US leading index on April 21"
+      ]
+    }
+  }
+}
