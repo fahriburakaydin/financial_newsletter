@@ -39,6 +39,6 @@ jobs:
 
       - name: Send Newsletter Emails
         env:
-          GMAIL_USER:         ${{ secrets.GMAIL_USER }}
+          GMAIL_USER:         ${{ secrets.SENDER_EMAIL }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         run: python - m financial_newsletter.utils.send_email_gmail.py
