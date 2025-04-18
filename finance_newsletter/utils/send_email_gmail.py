@@ -10,6 +10,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from datetime import datetime, timedelta, date 
 import markdown
+import re
 
 from dotenv import load_dotenv
 
@@ -35,10 +36,42 @@ def get_latest_newsletter_json():
     # If no files are found, return Non
     if not json_files:
         return None
-    # Get the latest file by modification time
-    latest_file = max(json_files, key=os.path.getmtime)
+    
+    # extract YYYY‑MM‑DD from each filename
+    def extract_date(path):
+        m = re.search(r"report_(\d{4}-\d{2}-\d{2})\.json$", path)
+        return m.group(1) if m else ""
+    
+    
+    # sort descending by date string (lex order works for YYYY-MM-DD)
+    json_files.sort(key=lambda p: extract_date(p), reverse=True)
+    latest = json_files[0]
+    print(f"Latest JSON file: {latest}")
+    return latest
+
+   
+
+def get_latest_newsletter_json():
+    """
+    Return the path to the newsletter JSON whose date in the filename is the most recent.
+    """
+    
+    files = glob.glob("docs/outputs/report_*.json")
+    print(f"Found JSON files: {files}")
+    if not files:
+        return None
+
+    # extract YYYY‑MM‑DD from each filename
+    def extract_date(path):
+        m = re.search(r"report_(\d{4}-\d{2}-\d{2})\.json$", path)
+        return m.group(1) if m else ""
+
+    # sort descending by date string (lex order works for YYYY-MM-DD)
+    files.sort(key=lambda p: extract_date(p), reverse=True)
+    latest_file = files[0]
     print(f"Latest JSON file: {latest_file}")
     return latest_file
+
 
 def extract_tldr_from_newsletter(json_file_path):
     try:
