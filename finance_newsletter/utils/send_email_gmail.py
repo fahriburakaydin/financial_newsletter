@@ -31,10 +31,13 @@ def load_subscribers(csv_file_path='subscribers.csv'):
 def get_latest_newsletter_json():
     # Use glob to find all JSON files that match your report pattern in the outputs folder
     json_files = glob.glob("docs/outputs/report_*.json")
+    print(f"Found JSON files: {json_files}")
+    # If no files are found, return Non
     if not json_files:
         return None
     # Get the latest file by modification time
     latest_file = max(json_files, key=os.path.getmtime)
+    print(f"Latest JSON file: {latest_file}")
     return latest_file
 
 def extract_tldr_from_newsletter(json_file_path):
@@ -70,7 +73,7 @@ def send_email_gmail(to_emails, subject, html_content):
     message = MIMEMultipart("alternative")
     message["Subject"] = subject
     message["From"] = sender_email
-    message["To"] = ", ".join(to_emails)
+    message["Bcc"] = ", ".join(to_emails)
 
     # Attach both plain text and HTML content parts
     #message.attach(MIMEText(plain_text_content, "plain"))  -- removed from the mail assuming that email clients can support html emails. Otherwise they wont see anything in the mail
