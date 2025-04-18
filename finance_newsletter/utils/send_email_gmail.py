@@ -123,6 +123,51 @@ def send_email_gmail(to_emails, subject, html_content):
         print("Error sending email:", e)
 
 if __name__ == '__main__':
+    subscribers = load_subscribers()
+
+    # Determine yesterday's date and check if it was Sunday
+    today = datetime.now()
+    date_str = today.strftime("%Y-%m-%d")
+    if today.weekday() == 6:  # Sunday
+        subject = "Market Closed Yesterday – Time to Unwind! 🌞"
+        html_email = f"""
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>🌴 Market Closed - Take a Break!</title>
+  <style>
+    body {{ margin:0; padding:0; background-color:#f9f9f9; font-family:Arial, sans-serif; }}
+    .container {{ max-width:600px; margin:40px auto; background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,0.1); }}
+    .header {{ background:#fcf6eb; padding:20px; text-align:center; }}
+    .header img {{ width:200px; height:auto; }}
+    .content {{ padding:20px; color:#333; font-size:16px; line-height:1.6; }}
+    .footer {{ padding:15px; background:#f0f0f0; text-align:center; font-size:14px; color:#555; }}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="{os.getenv('LOGO_URL', 'https://fahriburakaydin.github.io/financial_newsletter/logo.png')}" alt="Logo">
+    </div>
+    <div class="content">
+      <h2>Hello Friend!</h2>
+      <p>Today is Sunday, so yesterday and today the markets took a well-deserved breather—just like you should!</p>
+      <p>Take this moment to unplug, recharge, and focus on what truly matters: quality time with family, laughter with friends, and the simple joys of life.</p>
+      <p>What actually matters in life...</p>
+      <p>We know the markets can be a rollercoaster, but remember: every dip is just a chance to rise higher. So, take a deep breath and enjoy this little break.</p>
+      <p>We’ll be back tomorrow with fresh market insights—until then, enjoy the break! 😊</p>
+    </div>
+    <div class="footer">
+      <p>Sent with care by Minutes by Burki | Not financial advice</p>
+    </div>
+  </div>
+</body>
+</html>
+"""
+        send_email_gmail(subscribers, subject, html_email)
+        sys.exit(0)    
+
     # Locate the latest newsletter JSON file
     latest_json = get_latest_newsletter_json()
     if latest_json:
@@ -215,6 +260,5 @@ if __name__ == '__main__':
 </body>
 </html>
 """
-    subscribers = load_subscribers()
     subject = "Your Daily Financial Newsletter TLDR"
     send_email_gmail(subscribers, subject, html_email)

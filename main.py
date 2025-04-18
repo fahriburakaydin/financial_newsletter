@@ -99,8 +99,8 @@ def run_newsletter_generation(config: Dict[str, Any]) -> Dict[str, Any]:
         date_str = process_date(config)
 
         # Skip if it's Sunday
-        date_dt = datetime.strptime(date_str, "%Y-%m-%d")
-        if date_dt.weekday() == 6:  # Sunday == 6
+        date_today = datetime.now()
+        if date_today.weekday() == 6:  # Sunday == 6
             logger.info(f"{date_str} is Sunday; skipping report generation.")
             return {"date": date_str, "skipped": True}
 
