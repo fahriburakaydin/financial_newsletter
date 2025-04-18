@@ -98,8 +98,15 @@ def run_newsletter_generation(config: Dict[str, Any]) -> Dict[str, Any]:
         # Process date
         date_str = process_date(config)
 
+        # Skip if it's Sunday
+        date_dt = datetime.strptime(date_str, "%Y-%m-%d")
+        if date_dt.weekday() == 6:  # Sunday == 6
+            logger.info(f"{date_str} is Sunday; skipping report generation.")
+            return {"date": date_str, "skipped": True}
+
         outputs_dir = os.path.join(os.getcwd(), "docs", "outputs")
         existing_json = os.path.join(outputs_dir, f"report_{date_str}.json")
+        # Check if the report already exists
         if os.path.exists(existing_json):
             logger.info(f"Report for {date_str} already exists ({existing_json}); skipping generation.")
             return {"date": date_str, "skipped": True}
@@ -216,6 +223,10 @@ def main():
             logger.info(f"HTML report saved to {html_path}")
         
         logger.info("Newsletter generation and formatting completed successfully")
+
+        #update index
+        index_path = formatter.update_index()
+        logger.info(f"Index report saved to {index_path}")
         
     except Exception as e:
         logger.error(f"Error in main function: {e}")
