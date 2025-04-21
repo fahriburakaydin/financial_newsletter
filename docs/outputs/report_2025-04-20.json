@@ -1,0 +1,350 @@
+{
+  "date": "2025-04-20",
+  "tldr_summary": {
+    "section": "tldr_summary",
+    "summary": "**TLDR: April 20, 2025 Market Summary**  \n\n- **Key Earnings This Week**:  \n  - **Tesla** (April 22) faces scrutiny after Q1 deliveries fell 13% short of expectations, with analysts forecasting an 8% drop in earnings[1][2][4].  \n  - **Alphabet** (April 24) expects a 6.9% profit increase, but investor focus remains on AI investments and ad revenue trends[3].  \n\n- **Agricultural Markets**:  \n  - **Corn futures +1.8%** due to slow planting (17% complete), while **wheat futures -2.1%** on weak export demand[Market News].  \n  - **Spring wheat planting surges** (41% done, 12pp above average), though global oversupply limits gains[Market News].  \n\n- **Equities & Macro**:  \n  - **S&P 500 +0.13%** (5,233.13) after a volatile month (-9.27% in April), while **Dow Jones -1.33%** (38,832.96)[Market Reaction].  \n  - **US economic risks**: Tariffs may cut 2025 GDP by 0.5pp, with inflation adding $3,800/year to household costs. The Fed projects 75bps rate cuts in 2025[Macro Landscape].  \n\n- **Stock Spotlight**:  \n  - **Microsoft (MSFT)** trades at $367.78, down 11% in Q1 amid regulatory pressures. Analysts remain cautiously bullish long-term[Stock Watch].  \n\n- **Upcoming Events**:  \n  - **Fed speeches** (Jefferson, Harker, Kashkari) and **Beige Book release** (April 23) to guide policy expectations.  \n  - Critical data: **Durable Goods Orders** (April 24) and **Consumer Sentiment** (April 25)[Upcoming Events].  \n\n*Markets remain tense amid tariff shocks, earnings uncertainty, and mixed commodity trends.*"
+  },
+  "region": "US",
+  "market_news": {
+    "section": "market_news",
+    "date": "2025-04-20",
+    "region": "US",
+    "news_items": [
+      {
+        "headline": "Major Tech Earnings Releases: Tesla and Google in Focus",
+        "summary": "Tesla and Google are set to release their quarterly earnings this week, with investors closely watching for updates on electric vehicle demand, AI investments, and advertising revenue trends.",
+        "impact": "Anticipation drove volatility in tech stocks, with the Nasdaq Composite fluctuating in pre-market trading as analysts adjusted price targets.",
+        "source": "https://markets.businessinsider.com/news/stocks/most-anticipated-earnings-this-week-week-of-april-21-2025-1034600130"
+      },
+      {
+        "headline": "USDA Reports Signal Mixed Agricultural Outlook",
+        "summary": "The USDA's Crop Progress Report revealed slower-than-expected corn planting (17% complete) due to rains in the eastern Corn Belt, while winter wheat conditions held steady. Export data showed record corn sales but a decline in wheat demand.",
+        "impact": "Corn futures rose 1.8% on supply concerns, while wheat futures dropped 2.1% amid weak exports. Soybean prices stabilized despite China canceling an old-crop order.",
+        "source": "https://m.farms.com/ag-industry-news/top-5-market-movers-for-the-week-of-april-21-2025-113.aspx"
+      },
+      {
+        "headline": "Geopolitical Tensions and Dollar Weakness Fuel Commodity Moves",
+        "summary": "Escalating U.S.-China trade disputes and a 3-year low in the U.S. dollar intensified focus on export competitiveness. Agricultural exporters benefited from currency trends, while equities faced pressure from trade uncertainty.",
+        "impact": "The dollar index fell 0.6%, boosting dollar-denominated commodities. Industrial and tech sectors lagged as tariff concerns resurfaced.",
+        "source": "https://trendspider.com/blog/market-update-into-april-21st-2025/"
+      },
+      {
+        "headline": "Spring Wheat Planting Surges Ahead of Historical Averages",
+        "summary": "Spring wheat planting reached 41% completion, exceeding the five-year average by 12 percentage points, driven by favorable Midwestern weather earlier in April.",
+        "impact": "Wheat ETFs saw modest gains, though gains were capped by global oversupply concerns and competitive Russian exports.",
+        "source": "https://m.farms.com/ag-industry-news/top-5-market-movers-for-the-week-of-april-21-2025-113.aspx"
+      }
+    ]
+  },
+  "market_reaction": {
+    "section": "market_reaction",
+    "date": "2025-04-20",
+    "data": {
+      "indices": [
+        {
+          "name": "S&P 500",
+          "ticker": "^GSPC",
+          "performance": "+0.13%",
+          "value": "5,233.13",
+          "summary": "Gained marginally on April 21 after a volatile month marked by a 9.27% decline. The index remains 10.89% lower year-to-date amid ongoing tariff policy concerns."
+        },
+        {
+          "name": "Dow Jones Industrial Average",
+          "ticker": "^DJI",
+          "performance": "-1.33%",
+          "value": "38,832.96",
+          "summary": "Fell 527 points on April 21, extending its monthly loss to 8.81%. Year-to-date performance remains positive at +1.55% despite recent turbulence."
+        }
+      ],
+      "commodities": [
+        {
+          "name": "No data available",
+          "ticker": "GC=F, CL=F, SI=F",
+          "performance": "N/A",
+          "value": "N/A",
+          "summary": "No trading data available for April 20-21. Previous reports noted 7% oil price declines during early April volatility."
+        }
+      ],
+      "crypto": [
+        {
+          "name": "No data available",
+          "ticker": "BTC-USD, ETH-USD, SOL-USD",
+          "performance": "N/A",
+          "value": "N/A",
+          "summary": "No cryptocurrency data available for specified dates in provided sources."
+        }
+      ],
+      "overall_summary": "Equity markets showed mixed performance with S&P 500 stabilizing slightly (+0.13%) while Dow Jones extended losses (-1.33%). The absence of commodity and crypto data suggests either market closures or lack of updates. Sentiment remains cautious due to historic April 2-4 crash impacts and ongoing policy uncertainty, though recent modest gains hint at tentative stabilization."
+    }
+  },
+  "macro_landscape": {
+    "section": "macro_landscape",
+    "date": "2025-04-20",
+    "data": {
+      "regions": [
+        {
+          "name": "US",
+          "economic_conditions": {
+            "growth": "Real GDP growth projected -0.5pp in 2025 due to April tariffs, with long-term economic contraction of -0.4%",
+            "inflation": "Price level rise of 2.3% from tariffs, equivalent to $3,800 annual household consumer loss",
+            "employment": "Unemployment rate at 4.1% in early 2025, forecast to rise to 4.5% by 2026"
+          },
+          "central_bank": {
+            "current_rate": "Not explicitly stated in sources",
+            "recent_decision": "Forecasted 75bps rate cuts in 2025 (July, September, December)",
+            "outlook": "Expansionary fiscal policy expected to cushion slowdown; Fed balancing tariff shocks with potential tax cuts"
+          },
+          "recent_indicators": [
+            {
+              "indicator": "Equity Markets",
+              "value": "S&P 500 declined 4.6% in Q1 2025",
+              "impact": "Worst quarterly performance since 2022, driven by AI spending concerns and weak consumer sentiment"
+            },
+            {
+              "indicator": "Consumer Prices",
+              "value": "Apparel prices up 17% under all tariffs",
+              "impact": "Disproportionate impact on clothing/textiles sector"
+            }
+          ],
+          "risks_opportunities": [
+            "Risk: April tariff shock causing financial market turbulence and growth scare",
+            "Opportunity: Potential tax cut extensions and deregulation to counterbalance tariffs"
+          ]
+        },
+        {
+          "name": "EU",
+          "economic_conditions": {},
+          "central_bank": {},
+          "recent_indicators": [],
+          "risks_opportunities": []
+        },
+        {
+          "name": "China",
+          "economic_conditions": {},
+          "central_bank": {},
+          "recent_indicators": [],
+          "risks_opportunities": []
+        },
+        {
+          "name": "Sweden",
+          "economic_conditions": {},
+          "central_bank": {},
+          "recent_indicators": [],
+          "risks_opportunities": []
+        }
+      ],
+      "global_outlook": "US tariff policies dominate global economic risks, with spillover effects through trade channels and financial market volatility. No data available for EU/China/Sweden in provided sources."
+    }
+  },
+  "stock_watch": {
+    "section": "stock_watch",
+    "date": "2025-04-20",
+    "data": {
+      "stocks": [
+        {
+          "ticker": "MSFT",
+          "company": "Microsoft Corporation",
+          "overall_summary": "Current price: $367.78 (as of April 17, 2025). Recent news: Stock tested 15-month lows in March 2025, declining 11% in Q1 due to competition, regulatory pressures, and broader market weakness[1][3]. Technical analysis: Downtrend since 2024 peak (~$470), now trading below key moving averages. Fundamental outlook: Mixed sentiment with bullish long-term analyst predictions despite short-term challenges; trailing P/E 31.06, forward P/E 29.3[4]."
+        },
+        {
+          "ticker": "NVDA",
+          "company": "NVIDIA Corporation",
+          "overall_summary": "No available data in provided search results."
+        },
+        {
+          "ticker": "TSLA",
+          "company": "Tesla Inc.",
+          "overall_summary": "No available data in provided search results."
+        }
+      ]
+    }
+  },
+  "upcoming_events": {
+    "section": "upcoming_events",
+    "date": "2025-04-21",
+    "data": {
+      "calendar": [
+        {
+          "date": "2025-04-21",
+          "day": "Monday",
+          "events": [
+            {
+              "time": "12:00 PM ET",
+              "region": "MX",
+              "event": "Unemployment Rate",
+              "previous": "2.40%",
+              "forecast": "2.5%",
+              "importance": "Medium"
+            },
+            {
+              "time": "12:30 PM ET",
+              "region": "CA",
+              "event": "Wholesale Sales MoM Prel",
+              "previous": "0.6%",
+              "forecast": "0.3%",
+              "importance": "Medium"
+            },
+            {
+              "time": "03:30 PM ET",
+              "region": "US",
+              "event": "3-Month Bill Auction",
+              "previous": null,
+              "forecast": null,
+              "importance": "Medium"
+            },
+            {
+              "time": "03:30 PM ET",
+              "region": "US",
+              "event": "6-Month Bill Auction",
+              "previous": null,
+              "forecast": null,
+              "importance": "Medium"
+            },
+            {
+              "time": "08:30 AM ET",
+              "region": "US",
+              "event": "Chicago Fed President Austan Goolsbee Speech",
+              "previous": null,
+              "forecast": null,
+              "importance": "High"
+            },
+            {
+              "time": "10:00 AM ET",
+              "region": "US",
+              "event": "Leading Indicators Index",
+              "previous": null,
+              "forecast": null,
+              "importance": "Medium"
+            }
+          ]
+        },
+        {
+          "date": "2025-04-22",
+          "day": "Tuesday",
+          "events": [
+            {
+              "time": "01:00 PM ET",
+              "region": "US",
+              "event": "Fed Jefferson Speech",
+              "previous": null,
+              "forecast": null,
+              "importance": "High"
+            },
+            {
+              "time": "01:30 PM ET",
+              "region": "US",
+              "event": "Fed Harker Speech",
+              "previous": null,
+              "forecast": null,
+              "importance": "High"
+            },
+            {
+              "time": "02:00 PM ET",
+              "region": "US",
+              "event": "Richmond Fed Manufacturing Index",
+              "previous": "-6",
+              "forecast": "-5",
+              "importance": "Medium"
+            },
+            {
+              "time": "06:00 PM ET",
+              "region": "US",
+              "event": "Fed Kashkari Speech",
+              "previous": null,
+              "forecast": null,
+              "importance": "High"
+            }
+          ]
+        },
+        {
+          "date": "2025-04-23",
+          "day": "Wednesday",
+          "events": [
+            {
+              "time": "09:00 AM ET",
+              "region": "US",
+              "event": "Chicago Fed President Austan Goolsbee Speech",
+              "previous": null,
+              "forecast": null,
+              "importance": "High"
+            },
+            {
+              "time": "09:35 AM ET",
+              "region": "US",
+              "event": "Fed Christopher Waller Speech",
+              "previous": null,
+              "forecast": null,
+              "importance": "High"
+            },
+            {
+              "time": "10:00 AM ET",
+              "region": "US",
+              "event": "New Home Sales",
+              "previous": null,
+              "forecast": null,
+              "importance": "Medium"
+            },
+            {
+              "time": "02:00 PM ET",
+              "region": "US",
+              "event": "Beige Book Release",
+              "previous": null,
+              "forecast": null,
+              "importance": "High"
+            }
+          ]
+        },
+        {
+          "date": "2025-04-24",
+          "day": "Thursday",
+          "events": [
+            {
+              "time": "08:30 AM ET",
+              "region": "US",
+              "event": "Durable Goods Orders",
+              "previous": null,
+              "forecast": null,
+              "importance": "High"
+            },
+            {
+              "time": "10:00 AM ET",
+              "region": "US",
+              "event": "Existing Home Sales",
+              "previous": null,
+              "forecast": null,
+              "importance": "Medium"
+            },
+            {
+              "time": "05:00 PM ET",
+              "region": "US",
+              "event": "Fed Kashkari Speech",
+              "previous": null,
+              "forecast": null,
+              "importance": "High"
+            }
+          ]
+        },
+        {
+          "date": "2025-04-25",
+          "day": "Friday",
+          "events": [
+            {
+              "time": "10:00 AM ET",
+              "region": "US",
+              "event": "Consumer Sentiment",
+              "previous": null,
+              "forecast": null,
+              "importance": "Medium"
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        "Multiple Fed speeches including Jefferson, Harker, and Kashkari",
+        "Beige Book release on Wednesday",
+        "US Durable Goods Orders and Home Sales data",
+        "Ongoing Treasury bill auctions throughout the week"
+      ]
+    }
+  }
+}
