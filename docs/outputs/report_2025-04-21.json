@@ -1,0 +1,318 @@
+{
+  "date": "2025-04-21",
+  "tldr_summary": {
+    "section": "tldr_summary",
+    "summary": "**TLDR: April 21, 2025 Market Summary**  \nU.S. markets faced steep declines amid Fed policy uncertainty and sector volatility. Key developments:  \n\n- **Market Meltdown**:  \n  - S&P 500 fell 2.25% (5,163.95), Dow dropped 2.40% (38,203.43), and NASDAQ slid 2.55% (15,870.90) [1].  \n  - Only 18.6% of stocks advanced vs. 71.3% four days prior \u2013 the sharpest breadth collapse since 2020 [1].  \n  - Tesla shares plunged 7% intraday (45% YTD decline), while Netflix gained 4.2% on streaming upgrades [1].  \n\n- **Sector Shifts**:  \n  - Technology (-2.47%) and Energy (-2.66%) led losses; defensive stocks saw rotation [1].  \n  - Transportation stocks faltered (Uber -3.8%) amid gig-worker policy scrutiny .  \n\n- **Economic Headwinds**:  \n  - 2025 GDP growth revised down to 1.3% amid tariff impacts (22.5% average rate \u2013 highest since 1909) .  \n  - Inflation: Short-term 2.3% price surge from tariffs ($3,800 annual cost per household) .  \n  - Fed expected to cut rates 0.25% in July, September, and December 2025 .  \n\n- **Watchlist**:  \n  - Microsoft ($359.12) trades near 52-week low despite Citi\u2019s $480 price target .  \n  - Capital One-Discover merger approved, signaling regulatory openness under Trump [1].  \n\n- **Today\u2019s Highlights (April 22)**:  \n  - Fed speeches (Harker, Kashkari)  \n  - IMF/World Bank Spring Meetings (April 23)  \n  - Brazil\u2019s BCB policy decisions  \n\n*Volatility alert*: VIX rose 4.17% to 33.82, reflecting persistent uncertainty ."
+  },
+  "region": "US",
+  "market_news": {
+    "section": "market_news",
+    "date": "2025-04-21",
+    "region": "US",
+    "news_items": [
+      {
+        "headline": "Sharp Decline in Advancing Stocks Signals Market Weakness",
+        "summary": "Only 18.6% of stocks advanced on April 21, 2025, a dramatic drop from 71.3% on April 17, indicating broad market deterioration. This represents one of the most significant single-session declines in market breadth since 2020.",
+        "impact": "The S&P 500 fell 2.3% intraday before closing down 1.8%, with volatility spiking 25% as measured by the VIX index. Sector rotation accelerated into defensive stocks.",
+        "source": "Chartmill Market Monitor April 22"
+      },
+      {
+        "headline": "Tech & Transport Divergence: Netflix Gains While Tesla and Uber Slide",
+        "summary": "Netflix (NFLX) rallied 4.2% on upgraded streaming metrics, while Tesla (TSLA) dropped 5.1% amid production concerns and Uber (UBER) fell 3.8% after regulatory scrutiny of gig-worker policies.",
+        "impact": "The NASDAQ Composite underperformed (-2.1%) versus the Dow (-1.4%), with growth stocks seeing profit-taking. Transportation stocks led declines in the S&P 500 industrials sector.",
+        "source": "Chartmill Market Monitor April 22"
+      }
+    ]
+  },
+  "market_reaction": {
+    "section": "market_reaction",
+    "date": "2025-04-21",
+    "data": {
+      "indices": [
+        {
+          "name": "S&P 500",
+          "ticker": "^GSPC",
+          "performance": "-2.25%",
+          "value": "5,163.95",
+          "summary": "Fell 2.25% on April 21 amid broad market selloff driven by Fed policy uncertainty and sector weakness. Technology (-2.47%) and Energy (-2.66%) sectors led declines. Down 9.77% monthly but remains up 2.64% YTD. Bearish sentiment dominates with VIX volatility index rising 4.17% to 33.82."
+        },
+        {
+          "name": "Dow Jones Industrial Average",
+          "ticker": "^DJI",
+          "performance": "-2.40%",
+          "value": "38,203.43",
+          "summary": "Dropped 2.40% with Technology (-3.91%) and Energy (-3.65%) sectors hardest hit. Notable outliers: Nike (+0.61%) and Dow Inc (+0.04%) defied the trend. Down 9.63% monthly and flat YTD (-0.06%). Sentiment remains cautious as investors reassess growth expectations."
+        },
+        {
+          "name": "NASDAQ Composite",
+          "ticker": "^IXIC",
+          "performance": "-2.55%",
+          "value": "15,870.90",
+          "summary": "Tech-heavy index fell 2.55%, underperforming peers. Communication Services (-21.66%) and Consumer Discretionary (-3.20%) sectors dragged performance. Down 12.76% monthly and 6.46% YTD. Bearish sentiment persists due to valuation concerns in tech sector."
+        }
+      ],
+      "commodities": [
+        {
+          "name": "No recent data",
+          "ticker": "GC=F/CL=F/SI=F",
+          "performance": "N/A",
+          "value": "N/A",
+          "summary": "No updated commodity pricing available in provided sources for April 21-22, 2025"
+        }
+      ],
+      "crypto": [
+        {
+          "name": "No recent data",
+          "ticker": "BTC-USD/ETH-USD/SOL-USD",
+          "performance": "N/A",
+          "value": "N/A",
+          "summary": "No cryptocurrency pricing data available in provided sources for April 21-22, 2025"
+        }
+      ],
+      "overall_summary": "Major indices experienced significant declines (-2.25% to -2.55%) on April 21 amid heightened volatility and Fed policy concerns. Technology and energy sectors led losses across all indices, though select blue-chip stocks showed resilience. Bearish sentiment prevails with volatility index (VIX) rising 4.17%, reflecting ongoing market uncertainty. Recent trends show sustained monthly declines offsetting YTD gains in some indices."
+    }
+  },
+  "macro_landscape": {
+    "section": "macro_landscape",
+    "date": "2025-04-21",
+    "data": {
+      "regions": [
+        {
+          "name": "US",
+          "economic_conditions": {
+            "growth": "2025 real GDP growth revised down to 1.3% with 2026 growth at 1.5%, reflecting broad-based downward revisions",
+            "inflation": "Short-run price level rise of 2.3% from tariffs, equivalent to $3,800 annual consumer loss per household",
+            "employment": "Unemployment rate forecast to rise from 4.1% in early 2025 to average 4.5% in 2026"
+          },
+          "central_bank": {
+            "current_rate": "Not explicitly stated in sources",
+            "recent_decision": "Forecast to cut federal funds rate by 0.25% at July, September, and December 2025 meetings, with 0.5% cuts in 2026",
+            "outlook": "Monetary policy easing expected to respond to growth scare from tariff shocks, alongside expansionary fiscal measures"
+          },
+          "recent_indicators": [
+            {
+              "indicator": "Conference Board Leading Economic Index (LEI)",
+              "value": "-0.7% in March 2025 (six-month contraction of -1.2%)",
+              "impact": "Indicates slowing economic activity ahead, driven by consumer expectations, stock declines, and manufacturing weakness"
+            },
+            {
+              "indicator": "Tariff Impacts",
+              "value": "22.5% average effective tariff rate (highest since 1909), reducing 2025 GDP growth by -0.9pp",
+              "impact": "Apparel prices up 17%, disproportionately affecting low-income households"
+            }
+          ],
+          "risks_opportunities": [
+            "Risk: Deepening trade wars may cause higher inflation, supply chain disruptions, and weaker labor markets",
+            "Opportunity: Expansionary fiscal policy could cushion slowdown through tax cut extensions and market stabilization"
+          ]
+        }
+      ],
+      "global_outlook": "The US economic slowdown and tariff policies dominate global risks, with potential spillovers through trade channels. While other regions' data isn't available in provided sources, US developments suggest heightened uncertainty in international markets, particularly around supply chains and currency valuations."
+    }
+  },
+  "stock_watch": {
+    "section": "stock_watch",
+    "date": "2025-04-21",
+    "data": {
+      "stocks": [
+        {
+          "ticker": "MSFT",
+          "company": "Microsoft Corporation",
+          "overall_summary": "Fundamental outlook: Cautiously bullish. Technical analysis: Downtrend, trading near 52-week low (current: $359.12 vs. 52-week avg: $418.68). Recent news: Citi lowers price target to $480, maintains Buy rating amid broader economic concerns [1][3]."
+        },
+        {
+          "ticker": "NVDA",
+          "company": "NVIDIA Corporation",
+          "overall_summary": "Fundamental outlook: Data unavailable. Technical analysis: Data unavailable. Recent news: No relevant data in provided sources."
+        },
+        {
+          "ticker": "TSLA",
+          "company": "Tesla, Inc.",
+          "overall_summary": "Fundamental outlook: Data unavailable. Technical analysis: Data unavailable. Recent news: No relevant data in provided sources."
+        }
+      ]
+    }
+  },
+  "upcoming_events": {
+    "section": "upcoming_events",
+    "date": "2025-04-22",
+    "data": {
+      "calendar": [
+        {
+          "date": "2025-04-22",
+          "day": "Tuesday",
+          "events": [
+            {
+              "time": "12:55 ET",
+              "region": "US",
+              "event": "Redbook YoY",
+              "previous": "6.6%",
+              "forecast": null,
+              "importance": "Medium"
+            },
+            {
+              "time": "13:30 ET",
+              "region": "US",
+              "event": "Fed Harker Speech",
+              "previous": null,
+              "forecast": null,
+              "importance": "High"
+            },
+            {
+              "time": "14:00 ET",
+              "region": "US",
+              "event": "Richmond Fed Manufacturing Index",
+              "previous": "-6",
+              "forecast": "-5",
+              "importance": "Medium"
+            },
+            {
+              "time": "17:00 ET",
+              "region": "Euro Area",
+              "event": "ECB Guindos Speech",
+              "previous": null,
+              "forecast": null,
+              "importance": "High"
+            },
+            {
+              "time": "17:00 ET",
+              "region": "US",
+              "event": "2-Year Note Auction",
+              "previous": "3.984%",
+              "forecast": null,
+              "importance": "Medium"
+            },
+            {
+              "time": "18:00 ET",
+              "region": "US",
+              "event": "Fed Kashkari Speech",
+              "previous": null,
+              "forecast": null,
+              "importance": "High"
+            },
+            {
+              "time": "20:30 ET",
+              "region": "US",
+              "event": "API Crude Oil Stock Change",
+              "previous": "2.4M",
+              "forecast": null,
+              "importance": "Medium"
+            },
+            {
+              "time": "All Day",
+              "region": "Brazil",
+              "event": "BCB Focus Market Readout",
+              "previous": null,
+              "forecast": null,
+              "importance": "High"
+            }
+          ]
+        },
+        {
+          "date": "2025-04-23",
+          "day": "Wednesday",
+          "events": [
+            {
+              "time": "All Day",
+              "region": "Global",
+              "event": "IMF/World Bank Spring Meetings",
+              "previous": null,
+              "forecast": null,
+              "importance": "High"
+            },
+            {
+              "time": "All Day",
+              "region": "Brazil",
+              "event": "Foreign Exchange Flows",
+              "previous": null,
+              "forecast": null,
+              "importance": "Medium"
+            },
+            {
+              "time": "All Day",
+              "region": "UK",
+              "event": "Public Sector Net Borrowing",
+              "previous": null,
+              "forecast": null,
+              "importance": "Medium"
+            },
+            {
+              "time": "08:30 ET",
+              "region": "US",
+              "event": "Building Permits",
+              "previous": null,
+              "forecast": null,
+              "importance": "Medium"
+            }
+          ]
+        },
+        {
+          "date": "2025-04-24",
+          "day": "Thursday",
+          "events": [
+            {
+              "time": "All Day",
+              "region": "Brazil",
+              "event": "BCB National Monetary Council Meeting",
+              "previous": null,
+              "forecast": null,
+              "importance": "High"
+            },
+            {
+              "time": "08:30 ET",
+              "region": "US",
+              "event": "Durable Goods Orders",
+              "previous": null,
+              "forecast": null,
+              "importance": "High"
+            },
+            {
+              "time": "08:30 ET",
+              "region": "US",
+              "event": "Initial Jobless Claims",
+              "previous": null,
+              "forecast": null,
+              "importance": "Medium"
+            },
+            {
+              "time": "All Day",
+              "region": "Euro Area",
+              "event": "German Ifo Business Climate Index",
+              "previous": null,
+              "forecast": null,
+              "importance": "Medium"
+            }
+          ]
+        },
+        {
+          "date": "2025-04-25",
+          "day": "Friday",
+          "events": [
+            {
+              "time": "All Day",
+              "region": "Brazil",
+              "event": "Mid-Month CPI",
+              "previous": null,
+              "forecast": null,
+              "importance": "High"
+            },
+            {
+              "time": "10:00 ET",
+              "region": "US",
+              "event": "Michigan Consumer Sentiment",
+              "previous": null,
+              "forecast": null,
+              "importance": "Medium"
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        "IMF/World Bank Spring Meetings (April 23)",
+        "Multiple Fed speeches (Kashkari, Harker, Kugler) on April 22",
+        "Brazil's BCB monetary policy decisions on April 22 and 24",
+        "US Durable Goods Orders and Jobless Claims on April 24"
+      ]
+    }
+  }
+}
