@@ -1,0 +1,276 @@
+{
+  "date": "2025-04-28",
+  "tldr_summary": {
+    "section": "tldr_summary",
+    "summary": "**TLDR: April 28, 2025 Market Snapshot**  \n\n\ud83d\udcc8 **Market Movers**  \n- **AbbVie** surged 3.4% after beating Q1 earnings and raising guidance, driven by strong sales of Skyrizi and Rinvoq, though tariff risks loom.  \n- **Automotive stocks** gained premarket after Trump proposed easing tariffs for companies shifting production to the U.S.  \n- **Tech resilience**: S&P 500\u2019s IT sector jumped 6.83%, offsetting healthcare\u2019s 2.48% decline.  \n\n\ud83d\udcc9 **Index Performance**  \n- **Dow**: +0.28% (40,293) but down 4.07% for April.  \n- **S&P 500**: +0.06% (5,539) with a 10% YTD gain despite volatility.  \n- **Nasdaq**: Slipped 0.03% (19,473) despite tech strength.  \n\n\ud83c\udf0d **Macro Trends**  \n- **U.S. risks**: April tariffs threaten $1.2T in trade flows; Q1 GDP growth forecast slashed to 0.4% (from 2.4% in Q4 2024).  \n- **Global slowdown**: EU faces recession (0.6% GDP growth), China battles deflation and export declines.  \n- **Fed outlook**: Likely cuts in July, September, and December 2025 (total -0.75%).  \n\n\u26a0\ufe0f **Watch This Week**  \n- **Microsoft** (MSFT) earnings on April 30: Analysts eye Azure growth amid margin concerns.  \n- **Central bank decisions**: Bank of Japan (Thursday) and emerging markets (Thailand, Tajikistan, Colombia) on Wednesday.  \n\n\ud83d\udca1 **Key Insight**  \nMarkets balance tech optimism with tariff jitters, while central banks navigate inflation vs. growth trade-offs. Investors brace for volatility as earnings and policy decisions collide."
+  },
+  "region": "US",
+  "market_news": {
+    "section": "market_news",
+    "date": "2025-04-28",
+    "region": "US",
+    "news_items": [
+      {
+        "headline": "AbbVie Surpasses Earnings Estimates, Raises Guidance Amid Tariff Concerns",
+        "summary": "AbbVie reported better-than-expected Q1 sales and profits driven by strong performance of Skyrizi and Rinvoq. The company raised its full-year profit guidance but warned of potential tariff impacts on pharmaceuticals.",
+        "impact": "AbbVie shares surged 3.4%, leading S&P 500 advancers, while Gilead Sciences rebounded 3.1% after initial declines.",
+        "source": "Investopedia"
+      },
+      {
+        "headline": "Trump Announces Plan to Ease Automaker Tariffs to Boost Domestic Manufacturing",
+        "summary": "President Trump revealed a tariff reduction plan for automakers during a Michigan visit, aiming to reward companies shifting production to the U.S. The policy aligns with broader trade strategy reforms.",
+        "impact": "The announcement supported premarket gains in automotive stocks and contributed to the Dow's extended rally.",
+        "source": "Fox Business"
+      },
+      {
+        "headline": "Markets Brace for Key Labor and Consumer Data Amid Tariff Uncertainty",
+        "summary": "Upcoming JOLTS job openings (expected 7.464M vs 7.568M) and consumer confidence data (forecast 87.5 vs 92.9) are anticipated to reflect slowing labor markets and tariff-related economic concerns.",
+        "impact": "Futures for Dow, S&P 500, and Nasdaq 100 dipped 0.2-0.3% premarket as investors priced in potential softness.",
+        "source": "CME Group Econoday"
+      }
+    ]
+  },
+  "market_reaction": {
+    "section": "market_reaction",
+    "date": "2025-04-28",
+    "data": {
+      "indices": [
+        {
+          "name": "S&P 500",
+          "ticker": "^GSPC",
+          "performance": "+0.06%",
+          "value": "5,539.31",
+          "summary": "Gained marginally on April 29 amid sector rotation, with Information Technology (+6.83%) leading gains while Health Care (-2.48%) lagged. YTD performance remains positive at +10.00% despite recent volatility."
+        },
+        {
+          "name": "Dow Jones Industrial Average",
+          "ticker": "^DJI",
+          "performance": "+0.28%",
+          "value": "40,293.30",
+          "summary": "Rose 114 points on April 29 driven by Boeing (+2.46%) and Intel (+2.35%). Remains down -4.07% for the month as of April 29."
+        },
+        {
+          "name": "Nasdaq Composite",
+          "ticker": "^IXIC",
+          "performance": "-0.03%",
+          "value": "19,473.17",
+          "summary": "Slight decline on April 29 despite strong tech sector performance. Maintains YTD gain of 6.55%, though down -5.80% from 2025's start in CFD tracking."
+        },
+        {
+          "name": "OMXS30",
+          "ticker": "^OMXS30",
+          "performance": "Data unavailable",
+          "value": "N/A",
+          "summary": "No updated information available in provided sources as of April 29, 2025."
+        }
+      ],
+      "commodities": [
+        {
+          "name": "Gold",
+          "ticker": "GC=F",
+          "performance": "Data unavailable",
+          "value": "N/A",
+          "summary": "No trading data available in provided sources for April 28-29, 2025."
+        },
+        {
+          "name": "Crude Oil",
+          "ticker": "CL=F",
+          "performance": "Data unavailable",
+          "value": "N/A",
+          "summary": "Price information not found in provided search results."
+        },
+        {
+          "name": "Silver",
+          "ticker": "SI=F",
+          "performance": "Data unavailable",
+          "value": "N/A",
+          "summary": "No relevant commodity data available from sources."
+        }
+      ],
+      "crypto": [
+        {
+          "name": "Bitcoin",
+          "ticker": "BTC-USD",
+          "performance": "Data unavailable",
+          "value": "N/A",
+          "summary": "No cryptocurrency data present in provided search results."
+        },
+        {
+          "name": "Ethereum",
+          "ticker": "ETH-USD",
+          "performance": "Data unavailable",
+          "value": "N/A",
+          "summary": "Information not found in available sources."
+        },
+        {
+          "name": "Solana",
+          "ticker": "SOL-USD",
+          "performance": "Data unavailable",
+          "value": "N/A",
+          "summary": "No crypto market updates in provided materials."
+        }
+      ],
+      "overall_summary": "Equity markets showed mixed performance with tech resilience (S&P IT +6.83%) offsetting healthcare weakness. While major indices posted modest April 29 gains, YTD figures reveal broader pressures (S&P 500 CFD tracking -5.80%). Commodities and crypto data gaps in sources limit full analysis. Market sentiment appears cautiously optimistic about tech earnings but concerned about sector rotations and macroeconomic headwinds."
+    }
+  },
+  "macro_landscape": {
+    "section": "macro_landscape",
+    "date": "2025-04-28",
+    "data": {
+      "regions": [
+        {
+          "name": "US",
+          "economic_conditions": {
+            "growth": "Q1 2025 GDP growth forecast at 0.4% annualized (down from 2.4% in Q4 2024)",
+            "inflation": "CPI moderated to 2.7% year-over-year in Q4 2024, but expected to rise to 4.0% by Q2 2026 due to tariff impacts",
+            "employment": "Unemployment rate at 4.1% in early 2025, with payroll growth slowing to 152,000 jobs/month in Q1 2025"
+          },
+          "central_bank": {
+            "current_rate": "4.25-4.50%",
+            "recent_decision": "Forecast to cut rates by 0.25% in July, September, and December 2025",
+            "outlook": "Additional 0.50% cuts expected in 2026 amid growth slowdown"
+          },
+          "recent_indicators": [
+            {
+              "indicator": "Core PCE Price Index",
+              "value": "Moderating trend",
+              "impact": "Supported Fed's pause on rate hikes in late 2024"
+            },
+            {
+              "indicator": "Treasury Yield Spread",
+              "value": "10Y-2Y spread widest since early 2022",
+              "impact": "Reflecting increased political risk perception"
+            }
+          ],
+          "risks_opportunities": [
+            "Risk: April 2025 tariff shock threatening $1.2T in trade flows",
+            "Opportunity: Expansionary fiscal policy cushioning slowdown through tax cut extensions"
+          ]
+        },
+        {
+          "name": "EU",
+          "economic_conditions": {
+            "growth": "2025 GDP growth forecast at 0.6% with recession risks",
+            "inflation": "Projected to rise to 4.0% year-over-year by Q2 2026",
+            "employment": "Labor market deterioration expected in 2025"
+          },
+          "central_bank": {
+            "current_rate": "4.25-4.50%",
+            "recent_decision": "Maintained stable rates throughout 2025",
+            "outlook": "Caution due to tariff-induced inflation pressures"
+          },
+          "recent_indicators": [
+            {
+              "indicator": "Manufacturing PMI",
+              "value": "Below expansion threshold",
+              "impact": "Reflecting export sector weakness"
+            }
+          ],
+          "risks_opportunities": [
+            "Risk: Collapse in US trade from 100% tariffs on $270B EU exports",
+            "Opportunity: Potential tariff rollback negotiations mitigating downside"
+          ]
+        },
+        {
+          "name": "China",
+          "economic_conditions": {
+            "growth": "5.0% GDP growth in 2024, slowing in Q1 2025",
+            "inflation": "Persistent deflationary pressures",
+            "employment": "Weak labor market despite policy support"
+          },
+          "central_bank": {
+            "current_rate": "Not explicitly stated in sources",
+            "recent_decision": "Continued monetary easing since late 2024",
+            "outlook": "Prioritizing consumption stimulus amid export collapse"
+          },
+          "recent_indicators": [
+            {
+              "indicator": "Export Growth",
+              "value": "Sharp decline post-US tariffs",
+              "impact": "Manufacturing sector contraction"
+            }
+          ],
+          "risks_opportunities": [
+            "Risk: Property sector correction and low consumer confidence",
+            "Opportunity: Fiscal stimulus targeting domestic consumption"
+          ]
+        }
+      ],
+      "global_outlook": "Global growth faces synchronized slowdown driven by US-China tariff war, with 2025 growth projections downgraded across major economies. Central banks diverge in policy responses - Fed cutting while ECB holds. Key systemic risk remains potential escalation of protectionist measures, while opportunity exists in coordinated tariff rollbacks. Interconnected trade networks amplify spillover effects, particularly in manufacturing sectors."
+    }
+  },
+  "stock_watch": {
+    "section": "stock_watch",
+    "date": "2025-04-28",
+    "data": {
+      "stocks": [
+        {
+          "ticker": "MSFT",
+          "company": "Microsoft Corporation",
+          "overall_summary": "Fundamental outlook: Cautiously optimistic. Technical analysis: Mixed historical post-earnings volatility. Recent news: Q3 2025 earnings release scheduled for April 30, with consensus EPS estimates at $3.21 and revenue projections of $68.43B. Growth drivers include Azure and Microsoft 365, though net profit margins may slightly decline year-over-year. Historical data shows 55% negative one-day post-earnings returns over five years, with median drop of -3.8%."
+        }
+      ]
+    }
+  },
+  "upcoming_events": {
+    "section": "upcoming_events",
+    "date": "2025-04-29",
+    "data": {
+      "calendar": [
+        {
+          "date": "2025-04-30",
+          "day": "Wednesday",
+          "events": [
+            {
+              "time": "All Day",
+              "region": "Thailand",
+              "event": "Bank of Thailand Monetary Policy Meeting",
+              "importance": "High"
+            },
+            {
+              "time": "All Day",
+              "region": "Tajikistan",
+              "event": "National Bank of Tajikistan Monetary Policy Meeting",
+              "importance": "High"
+            },
+            {
+              "time": "All Day",
+              "region": "Colombia",
+              "event": "Central Bank of Colombia Monetary Policy Meeting",
+              "importance": "High"
+            }
+          ]
+        },
+        {
+          "date": "2025-05-01",
+          "day": "Thursday",
+          "events": [
+            {
+              "time": "All Day",
+              "region": "Japan",
+              "event": "Bank of Japan Monetary Policy Meeting",
+              "importance": "High"
+            }
+          ]
+        },
+        {
+          "date": "2025-05-05",
+          "day": "Monday",
+          "events": [
+            {
+              "time": "All Day",
+              "region": "Pakistan",
+              "event": "State Bank of Pakistan Monetary Policy Meeting",
+              "importance": "High"
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        "Bank of Japan policy decision on Thursday",
+        "Three concurrent central bank meetings in emerging markets (Thailand, Tajikistan, Colombia) on Wednesday",
+        "State Bank of Pakistan rate setting on Monday"
+      ]
+    }
+  }
+}
