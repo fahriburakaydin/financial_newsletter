@@ -1,0 +1,333 @@
+{
+  "date": "2025-04-30",
+  "tldr_summary": {
+    "section": "tldr_summary",
+    "summary": "**TLDR: April 30, 2025 Market Summary**  \n\n**\ud83d\udd25 Key Market Moves**  \n- **Tech earnings save the day**: Meta (+6% after-hours) and Microsoft (+7% after-hours) beat Q1 estimates, boosting Nasdaq/S&P 500 futures despite earlier GDP-driven declines[1][2].  \n- **GDP shock**: US economy shrank 0.3% in Q1 (vs 0.4% growth forecast), triggering midday selloffs before late tech-led recovery[1][2].  \n- **Index streaks**: S&P 500 (+0.15%) and Dow (+0.35%) extended winning streaks to 7 days, showcasing market resilience[1].  \n\n**\ud83d\udcc9 Macro Watch**  \n- **Recession risks rise**: Consumer confidence plunged 12.5 points (April) while Leading Economic Index fell 0.7% (March)[1].  \n- **Labor silver lining**: Private sector added 325K jobs in Jan-Feb 2025, though payroll growth slowed to 152K/month in Q1[1].  \n\n**\ud83d\udea8 Critical Developments**  \n- **Trade war tremors**: America Movil\u2019s Mexico/Brazil user losses (-1.4M) highlight emerging market strain from US tariff threats[1].  \n- **Commodity standstill**: Oil/gold markets paused ahead of Thursday\u2019s EIA petroleum report and manufacturing data[1].  \n\n**\ud83d\udd0d What\u2019s Next**  \n- **May 1 highlights**: ISM Manufacturing Index and 10-Year Note Auction could dictate short-term sentiment[1].  \n- **Earnings spotlight**: Apple/Amazon results (Thursday) to test whether tech can sustain GDP-defying rally[1].  \n\n**The Bottom Line**: Markets shrugged off recession signals through tech strength, but tariff impacts and slowing growth keep volatility elevated. Watch today\u2019s manufacturing data for confirmation of economic trajectory."
+  },
+  "region": "US",
+  "market_news": {
+    "section": "market_news",
+    "date": "2025-04-30",
+    "region": "US",
+    "news_items": [
+      {
+        "headline": "Tech Earnings from Meta and Microsoft Drive After-Hours Rally",
+        "summary": "Meta Platforms and Microsoft reported better-than-expected Q1 earnings, with Meta's EPS at $6.43 (vs. $5.25 expected) and revenue of $42.3B (vs. $41.3B expected). Microsoft also surpassed earnings estimates, boosting investor sentiment.",
+        "impact": "Nasdaq futures rose 1.3% in after-hours trading, while S&P 500 and Dow futures gained 0.8% and 0.4%, respectively, offsetting earlier declines during the regular session.",
+        "source": "Late rally propels Dow, S&P 500 to slight gains - YouTube [1]"
+      },
+      {
+        "headline": "US Q1 GDP Contracts 0.3%, Sparking Recession Fears",
+        "summary": "The US economy shrank at a 0.3% annualized rate in Q1 2025, reversing from 2.4% growth in Q4 2024. The decline was driven by a 41% surge in imports (linked to tariff pre-empting) and reduced consumer/government spending.",
+        "impact": "The Dow fell 281 points (-0.7%), S&P 500 dropped 1%, and Nasdaq slid 1.4% during regular trading as investors priced in heightened recession risks.",
+        "source": "CNBC TV18 [2]"
+      },
+      {
+        "headline": "America Movil Profit Misses Estimates Amid Mexico Slowdown",
+        "summary": "Carlos Slim's America Movil reported Q1 net income of 18.7B pesos ($953M), below estimates, as 1.4M prepaid users disconnected in Mexico and Brazil due to economic strains exacerbated by US tariff threats.",
+        "impact": "Shares fell 1.8% in Mexican trading before paring losses, reflecting broader concerns about emerging market stability and US trade policy impacts.",
+        "source": "CNBC TV18 [2]"
+      }
+    ]
+  },
+  "market_reaction": {
+    "section": "market_reaction",
+    "date": "2025-04-30",
+    "data": {
+      "indices": [
+        {
+          "name": "S&P 500",
+          "ticker": "^GSPC",
+          "performance": "+0.15%",
+          "value": "5,569.06",
+          "summary": "Recovered from intraday lows to close slightly higher despite GDP contraction fears, marking its seventh straight day of gains. Driven by tech earnings resilience."
+        },
+        {
+          "name": "Dow Jones Industrial Average",
+          "ticker": "^DJI",
+          "performance": "+0.35%",
+          "value": "40,669.36",
+          "summary": "Gained 141 points as investors bought dips in blue-chip stocks, shrugging off recession concerns tied to Trump-era tariff impacts."
+        },
+        {
+          "name": "Nasdaq Composite",
+          "ticker": "^IXIC",
+          "performance": "-0.09%",
+          "value": "17,446.34",
+          "summary": "Moderately declined despite after-hours rallies in Microsoft (+7%) and Meta (+6%), reflecting sector rotation ahead of Apple/Amazon earnings."
+        },
+        {
+          "name": "OMXS30",
+          "ticker": "^OMXS30",
+          "performance": "N/A",
+          "value": "N/A",
+          "summary": "No updated data available in provided sources as of 2025-04-30."
+        }
+      ],
+      "commodities": [
+        {
+          "name": "Gold",
+          "ticker": "GC=F",
+          "performance": "N/A",
+          "value": "N/A",
+          "summary": "Market closed - No trading updates. Sentiment remains cautious given equity market volatility and recession risks."
+        },
+        {
+          "name": "Crude Oil",
+          "ticker": "CL=F",
+          "performance": "N/A",
+          "value": "N/A",
+          "summary": "Market closed - Focus remains on demand concerns from GDP contraction and geopolitical factors."
+        },
+        {
+          "name": "Silver",
+          "ticker": "SI=F",
+          "performance": "N/A",
+          "value": "N/A",
+          "summary": "Market closed - Industrial metal demand outlook clouded by economic contraction data."
+        }
+      ],
+      "crypto": [
+        {
+          "name": "Bitcoin",
+          "ticker": "BTC-USD",
+          "performance": "N/A",
+          "value": "N/A",
+          "summary": "No updated data available in provided sources as of 2025-04-30."
+        },
+        {
+          "name": "Ethereum",
+          "ticker": "ETH-USD",
+          "performance": "N/A",
+          "value": "N/A",
+          "summary": "No updated data available in provided sources as of 2025-04-30."
+        },
+        {
+          "name": "Solana",
+          "ticker": "SOL-USD",
+          "performance": "N/A",
+          "value": "N/A",
+          "summary": "No updated data available in provided sources as of 2025-04-30."
+        }
+      ],
+      "overall_summary": "Equities demonstrated remarkable resilience with S&P 500 and Dow extending win streaks despite Q1 GDP contraction (-0.3%), as investors focused on strong tech earnings and potential tariff policy shifts. Commodities and crypto lacked fresh data, while markets awaited Thursday's earnings (Apple/Amazon) and economic reports to confirm whether the GDP dip was tariff-driven anomaly or sustained slowdown."
+    }
+  },
+  "macro_landscape": {
+    "section": "macro_landscape",
+    "date": "2025-04-30",
+    "data": {
+      "regions": [
+        {
+          "name": "US",
+          "economic_conditions": {
+            "growth": "Q1 2025 GDP growth forecast at 0.4% annualized rate, slowing from 2.4% in Q4 2024",
+            "inflation": "Moderating due to lower energy prices and core goods inflation, with favorable readings in February and March 2025",
+            "employment": "Payroll job growth slowed to 152,000 average monthly in Q1 2025; private sector added 325,000 jobs in first two months of 2025"
+          },
+          "central_bank": {
+            "current_rate": "Data not available in provided sources",
+            "recent_decision": "Data not available in provided sources",
+            "outlook": "Data not available in provided sources"
+          },
+          "recent_indicators": [
+            {
+              "indicator": "Leading Economic Index (LEI)",
+              "value": "Declined 0.7% in March 2025",
+              "impact": "Signals slowing economic activity ahead, driven by falling consumer expectations and stock prices"
+            },
+            {
+              "indicator": "Consumer Confidence Expectations Index",
+              "value": "Dropped 12.5 points to 54.4 in April 2025",
+              "impact": "Reflects heightened economic uncertainty and weaker short-term outlook"
+            }
+          ],
+          "risks_opportunities": [
+            "Risk: Deepening trade wars may lead to higher inflation, supply chain disruptions, and weaker labor market",
+            "Opportunity: Labor market recovery in March 2025 suggests resilience in private-sector employment"
+          ]
+        },
+        {
+          "name": "EU",
+          "economic_conditions": {
+            "growth": "Data not available in provided sources",
+            "inflation": "Data not available in provided sources",
+            "employment": "Data not available in provided sources"
+          },
+          "central_bank": {
+            "current_rate": "Data not available in provided sources",
+            "recent_decision": "Data not available in provided sources",
+            "outlook": "Data not available in provided sources"
+          },
+          "recent_indicators": [],
+          "risks_opportunities": []
+        },
+        {
+          "name": "China",
+          "economic_conditions": {
+            "growth": "Data not available in provided sources",
+            "inflation": "Data not available in provided sources",
+            "employment": "Data not available in provided sources"
+          },
+          "central_bank": {
+            "current_rate": "Data not available in provided sources",
+            "recent_decision": "Data not available in provided sources",
+            "outlook": "Data not available in provided sources"
+          },
+          "recent_indicators": [],
+          "risks_opportunities": []
+        },
+        {
+          "name": "Sweden",
+          "economic_conditions": {
+            "growth": "Data not available in provided sources",
+            "inflation": "Data not available in provided sources",
+            "employment": "Data not available in provided sources"
+          },
+          "central_bank": {
+            "current_rate": "Data not available in provided sources",
+            "recent_decision": "Data not available in provided sources",
+            "outlook": "Data not available in provided sources"
+          },
+          "recent_indicators": [],
+          "risks_opportunities": []
+        }
+      ],
+      "global_outlook": "The US economy shows moderating growth amid trade policy uncertainties, with risks of supply chain disruptions and inflationary pressures from potential tariffs. Data for EU, China, and Sweden are unavailable in provided sources, limiting a comprehensive global assessment."
+    }
+  },
+  "stock_watch": {
+    "section": "stock_watch",
+    "date": "2025-04-30",
+    "data": {
+      "stocks": [
+        {
+          "ticker": "MSFT",
+          "company": "Microsoft Corporation",
+          "overall_summary": "Fundamental outlook: Bullish. Technical analysis: Short-term bullish reversal after earnings-driven 6% after-hours gain. Recent news: Q3 FY2025 earnings exceeded expectations with $70.07B revenue (+13% YoY) and $25.82B net profit, driven by 21% Intelligent Cloud growth[1]."
+        },
+        {
+          "ticker": "NVDA",
+          "company": "NVIDIA Corporation",
+          "overall_summary": "Data unavailable in provided sources. Technical analysis: Insufficient data. Fundamental outlook: Insufficient data. Recent news: Not covered in provided materials."
+        },
+        {
+          "ticker": "TSLA",
+          "company": "Tesla, Inc.",
+          "overall_summary": "Data unavailable in provided sources. Technical analysis: Insufficient data. Fundamental outlook: Insufficient data. Recent news: Not covered in provided materials."
+        }
+      ]
+    }
+  },
+  "upcoming_events": {
+    "section": "upcoming_events",
+    "date": "2025-05-01",
+    "data": {
+      "calendar": [
+        {
+          "date": "2025-05-01",
+          "day": "Thursday",
+          "events": [
+            {
+              "time": "10:00 ET",
+              "region": "US",
+              "event": "EIA Petroleum Status Report",
+              "previous": null,
+              "forecast": null,
+              "importance": "High"
+            },
+            {
+              "time": "11:00 ET",
+              "region": "US",
+              "event": "4-Month Bill Auction",
+              "previous": null,
+              "forecast": null,
+              "importance": "Medium"
+            },
+            {
+              "time": "03:00 ET",
+              "region": "US",
+              "event": "3-Month Bill Settlement",
+              "previous": null,
+              "forecast": null,
+              "importance": "Medium"
+            }
+          ]
+        },
+        {
+          "date": "2025-05-02",
+          "day": "Friday",
+          "events": [
+            {
+              "time": "07:30 ET",
+              "region": "US",
+              "event": "Challenger Job-Cut Report",
+              "previous": null,
+              "forecast": null,
+              "importance": "High"
+            },
+            {
+              "time": "08:30 ET",
+              "region": "US",
+              "event": "Jobless Claims",
+              "previous": null,
+              "forecast": null,
+              "importance": "High"
+            },
+            {
+              "time": "09:45 ET",
+              "region": "US",
+              "event": "PMI Manufacturing Final",
+              "previous": null,
+              "forecast": null,
+              "importance": "Medium"
+            },
+            {
+              "time": "11:00 ET",
+              "region": "US",
+              "event": "3-Month Bill Announcement",
+              "previous": null,
+              "forecast": null,
+              "importance": "Medium"
+            },
+            {
+              "time": "11:30 ET",
+              "region": "US",
+              "event": "4-Week Bill Auction",
+              "previous": null,
+              "forecast": null,
+              "importance": "Medium"
+            }
+          ]
+        },
+        {
+          "date": "2025-05-06",
+          "day": "Tuesday",
+          "events": [
+            {
+              "time": "12:30 ET",
+              "region": "US",
+              "event": "Balance of Trade",
+              "previous": "$-137.1B",
+              "forecast": "$-122.7B",
+              "importance": "High"
+            },
+            {
+              "time": "05:00 ET",
+              "region": "US",
+              "event": "10-Year Note Auction",
+              "previous": "4.435%",
+              "forecast": null,
+              "importance": "High"
+            }
+          ]
+        }
+      ],
+      "highlights": [
+        "US ISM Manufacturing Index release on May 1",
+        "Key Treasury auctions throughout the week including 10-Year Note Auction",
+        "US Balance of Trade data on May 6 showing forecasted improvement"
+      ]
+    }
+  }
+}
